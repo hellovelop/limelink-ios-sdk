@@ -175,4 +175,152 @@ When directly accessing `https://www.limelink.org/api/v1/dynamic_link/{suffix}`:
 // 3. Return the link via completion handler
 ```
 
+## Deferred Deep Link Support
+
+Deferred Deep Link allows you to receive link parameters when the app is first launched after installation, even if the user clicked the link before the app was installed.
+
+### Usage
+
+#### 1. Get Parameters by Token (Use on first launch after app installation)
+
+Retrieve parameters using a stored token when the app is first launched after installation.
+
+**Swift:**
+```swift
+import UIKit
+import LimelinkIOSSDK
+
+class ViewController: UIViewController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // Get parameters by token on first launch after app installation
+        let token = "your_deferred_deep_link_token"
+        
+        DeferredDeepLinkService.getDeferredDeepLinkByToken(token: token) { result in
+            switch result {
+            case .success(let response):
+                // Handle parameters
+                if let parameters = response.parameters {
+                    print("Parameters: \(parameters)")
+                    // Example: {"product_id": "123", "campaign": "summer_sale"}
+                }
+                
+                // iOS App Store URL
+                if let iosAppStoreURL = response.ios_app_store_url {
+                    print("iOS App Store URL: \(iosAppStoreURL)")
+                }
+                
+                // Fallback URL (when app is not installed)
+                if let fallbackURL = response.fallback_url {
+                    print("Fallback URL: \(fallbackURL)")
+                }
+                
+            case .failure(let error):
+                print("Error: \(error)")
+            }
+        }
+    }
+}
+```
+
+**Objective-C:**
+```objc
+#import <LimelinkIOSSDK/LimelinkIOSSDK-Swift.h>
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    NSString *token = @"your_deferred_deep_link_token";
+    
+    [DeferredDeepLinkService getDeferredDeepLinkByTokenWithToken:token 
+                                                       completion:^(id _Nullable result, NSError * _Nullable error) {
+        if (error) {
+            NSLog(@"Error: %@", error);
+            return;
+        }
+        
+        GetDeferredDeepLinkByTokenResponse *response = (GetDeferredDeepLinkByTokenResponse *)result;
+        
+        // Handle parameters
+        NSDictionary *parameters = response.parameters;
+        if (parameters) {
+            NSLog(@"Parameters: %@", parameters);
+        }
+        
+        // iOS App Store URL
+        NSString *iosAppStoreURL = response.ios_app_store_url;
+        if (iosAppStoreURL) {
+            NSLog(@"iOS App Store URL: %@", iosAppStoreURL);
+        }
+        
+        // Fallback URL
+        NSString *fallbackURL = response.fallback_url;
+        if (fallbackURL) {
+            NSLog(@"Fallback URL: %@", fallbackURL);
+        }
+    }];
+}
+```
+
+#### 2. Check Token Availability
+
+Check if a token is already registered.
+
+**Swift:**
+```swift
+import UIKit
+import LimelinkIOSSDK
+
+let token = "your_deferred_deep_link_token"
+
+DeferredDeepLinkService.checkToken(token: token) { result in
+    switch result {
+    case .success(let response):
+        if response.is_exist {
+            print("Token already exists")
+        } else {
+            print("Token is available")
+        }
+    case .failure(let error):
+        print("Error: \(error)")
+    }
+}
+```
+
+**Objective-C:**
+```objc
+#import <LimelinkIOSSDK/LimelinkIOSSDK-Swift.h>
+
+NSString *token = @"your_deferred_deep_link_token";
+
+[DeferredDeepLinkService checkTokenWithToken:token 
+                                   completion:^(id _Nullable result, NSError * _Nullable error) {
+    if (error) {
+        NSLog(@"Error: %@", error);
+        return;
+    }
+    
+    CheckTokenResponse *response = (CheckTokenResponse *)result;
+    if (response.is_exist) {
+        NSLog(@"Token already exists");
+    } else {
+        NSLog(@"Token is available");
+    }
+}];
+```
+
+### Use Cases
+
+1. **Link Click Before App Installation Scenario:**
+   - User clicks a link on the web
+   - If the app is not installed, redirect to App Store
+   - After app installation, retrieve parameters using the token on first launch
+   - Navigate to the appropriate screen using the retrieved parameters
+
+2. **Marketing Campaign Tracking:**
+   - Create unique tokens for each campaign
+   - Retrieve campaign information using the token on first launch after app installation
+   - Route users to the appropriate screen based on parameters
+
 
