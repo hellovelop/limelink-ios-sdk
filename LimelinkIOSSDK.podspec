@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'LimelinkIOSSDK'
-  s.version          = '0.1.40'
-  s.summary          = 'We use limelink service for analytics and page navigation..'
+  s.version          = '0.1.41'
+  s.summary          = 'Limelink iOS SDK for analytics, deep linking, universal links, and deferred deep links.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,7 +18,13 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: We use limelink service for analytics and page navigation. We currently provide deep linking services and plan to offer more services in the future.
+Limelink iOS SDK provides comprehensive deep linking and analytics services for iOS applications. 
+Features include:
+- Statistical tracking for first run and relaunch events
+- Deep linking with path parameter handling
+- Universal Link support with subdomain and direct access methods
+- Deferred Deep Link support for app installation tracking
+- Token-based parameter retrieval for post-installation scenarios
                        DESC
 
   s.homepage         = 'https://limelink.org'
