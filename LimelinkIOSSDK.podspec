@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'LimelinkIOSSDK'
-  s.version          = '0.1.41'
+  s.version          = '0.1.42'
   s.summary          = 'Limelink iOS SDK for analytics, deep linking, universal links, and deferred deep links.'
 
 # This description is used to generate tags and improve search results.
@@ -23,8 +23,8 @@ Features include:
 - Statistical tracking for first run and relaunch events
 - Deep linking with path parameter handling
 - Universal Link support with subdomain and direct access methods
-- Deferred Deep Link support for app installation tracking
-- Token-based parameter retrieval for post-installation scenarios
+- Deferred Deep Link support with device fingerprinting for automatic user matching
+- Seamless post-installation deep link retrieval
                        DESC
 
   s.homepage         = 'https://limelink.org'

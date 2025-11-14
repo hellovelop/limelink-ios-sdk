@@ -177,13 +177,17 @@ When directly accessing `https://www.limelink.org/api/v1/dynamic_link/{suffix}`:
 
 ## Deferred Deep Link Support
 
-Deferred Deep Link allows you to receive link parameters when the app is first launched after installation, even if the user clicked the link before the app was installed.
+Deferred Deep Link allows you to retrieve deep link information when the app is first launched after installation, even if the user clicked the link before the app was installed. This implementation uses device fingerprinting (screen size and OS version) to match users.
+
+### How It Works
+
+1. User clicks a link on the web
+2. Server stores device information (width, height, user agent) with the link suffix
+3. If app is not installed, redirect to App Store
+4. After app installation, on first launch, SDK automatically matches device information
+5. SDK retrieves the deep link URI and navigates to the appropriate screen
 
 ### Usage
-
-#### 1. Get Parameters by Token (Use on first launch after app installation)
-
-Retrieve parameters using a stored token when the app is first launched after installation.
 
 **Swift:**
 ```swift
@@ -194,31 +198,34 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Get parameters by token on first launch after app installation
-        let token = "your_deferred_deep_link_token"
-        
-        DeferredDeepLinkService.getDeferredDeepLinkByToken(token: token) { result in
-            switch result {
-            case .success(let response):
-                // Handle parameters
-                if let parameters = response.parameters {
-                    print("Parameters: \(parameters)")
-                    // Example: {"product_id": "123", "campaign": "summer_sale"}
+        // Check for deferred deep link on first launch
+        if LinkStats.isFirstLaunch() {
+            checkDeferredDeepLink()
+        }
+    }
+    
+    private func checkDeferredDeepLink() {
+        DeferredDeepLinkService.getDeferredDeepLink { result in
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let uri):
+                    print("✅ Deferred Deep Link URI: \(uri)")
+                    // Navigate to the appropriate screen using the URI
+                    self.handleDeepLink(uri)
+                    
+                case .failure(let error):
+                    print("❌ No deferred deep link found or error: \(error.localizedDescription)")
+                    // No matching deferred deep link found - continue with normal flow
                 }
-                
-                // iOS App Store URL
-                if let iosAppStoreURL = response.ios_app_store_url {
-                    print("iOS App Store URL: \(iosAppStoreURL)")
-                }
-                
-                // Fallback URL (when app is not installed)
-                if let fallbackURL = response.fallback_url {
-                    print("Fallback URL: \(fallbackURL)")
-                }
-                
-            case .failure(let error):
-                print("Error: \(error)")
             }
+        }
+    }
+    
+    private func handleDeepLink(_ uri: String) {
+        if let url = URL(string: uri) {
+            // Handle the deep link
+            // Example: myapp://product/123
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
         }
     }
 }
@@ -231,96 +238,80 @@ class ViewController: UIViewController {
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSString *token = @"your_deferred_deep_link_token";
-    
-    [DeferredDeepLinkService getDeferredDeepLinkByTokenWithToken:token 
-                                                       completion:^(id _Nullable result, NSError * _Nullable error) {
-        if (error) {
-            NSLog(@"Error: %@", error);
-            return;
-        }
-        
-        GetDeferredDeepLinkByTokenResponse *response = (GetDeferredDeepLinkByTokenResponse *)result;
-        
-        // Handle parameters
-        NSDictionary *parameters = response.parameters;
-        if (parameters) {
-            NSLog(@"Parameters: %@", parameters);
-        }
-        
-        // iOS App Store URL
-        NSString *iosAppStoreURL = response.ios_app_store_url;
-        if (iosAppStoreURL) {
-            NSLog(@"iOS App Store URL: %@", iosAppStoreURL);
-        }
-        
-        // Fallback URL
-        NSString *fallbackURL = response.fallback_url;
-        if (fallbackURL) {
-            NSLog(@"Fallback URL: %@", fallbackURL);
-        }
+    // Check for deferred deep link on first launch
+    if ([LinkStats isFirstLaunch]) {
+        [self checkDeferredDeepLink];
+    }
+}
+
+- (void)checkDeferredDeepLink {
+    [DeferredDeepLinkService getDeferredDeepLinkWithCompletion:^(NSString * _Nullable uri, NSError * _Nullable error) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            if (error) {
+                NSLog(@"❌ No deferred deep link found or error: %@", error.localizedDescription);
+                // No matching deferred deep link found - continue with normal flow
+                return;
+            }
+            
+            if (uri) {
+                NSLog(@"✅ Deferred Deep Link URI: %@", uri);
+                // Navigate to the appropriate screen using the URI
+                [self handleDeepLink:uri];
+            }
+        });
     }];
 }
-```
 
-#### 2. Check Token Availability
-
-Check if a token is already registered.
-
-**Swift:**
-```swift
-import UIKit
-import LimelinkIOSSDK
-
-let token = "your_deferred_deep_link_token"
-
-DeferredDeepLinkService.checkToken(token: token) { result in
-    switch result {
-    case .success(let response):
-        if response.is_exist {
-            print("Token already exists")
-        } else {
-            print("Token is available")
-        }
-    case .failure(let error):
-        print("Error: \(error)")
+- (void)handleDeepLink:(NSString *)uri {
+    NSURL *url = [NSURL URLWithString:uri];
+    if (url) {
+        // Handle the deep link
+        // Example: myapp://product/123
+        [[UIApplication sharedApplication] openURL:url options:@{} completionHandler:nil];
     }
 }
 ```
 
-**Objective-C:**
-```objc
-#import <LimelinkIOSSDK/LimelinkIOSSDK-Swift.h>
+### Device Information Collected
 
-NSString *token = @"your_deferred_deep_link_token";
+The SDK automatically collects the following information to match users:
+- **Screen Width**: Device screen width in points
+- **Screen Height**: Device screen height in points
+- **User Agent**: iOS version in format "iOS 18_7" (e.g., iOS 18.7 → "iOS 18_7")
 
-[DeferredDeepLinkService checkTokenWithToken:token 
-                                   completion:^(id _Nullable result, NSError * _Nullable error) {
-    if (error) {
-        NSLog(@"Error: %@", error);
-        return;
-    }
-    
-    CheckTokenResponse *response = (CheckTokenResponse *)result;
-    if (response.is_exist) {
-        NSLog(@"Token already exists");
-    } else {
-        NSLog(@"Token is available");
-    }
-}];
+### API Flow
+
+```
+1. SDK collects device info (width, height, user_agent)
+   ↓
+2. GET /deferred-deep-link?width=414&height=896&user_agent=iOS 18_7
+   ↓
+3. Server returns: {"suffix": "testsub"}
+   ↓
+4. GET /dynamic_link/testsub
+   ↓
+5. Server returns: {"uri": "myapp://product/123"}
+   ↓
+6. SDK returns the URI via completion handler
 ```
 
 ### Use Cases
 
-1. **Link Click Before App Installation Scenario:**
-   - User clicks a link on the web
-   - If the app is not installed, redirect to App Store
-   - After app installation, retrieve parameters using the token on first launch
-   - Navigate to the appropriate screen using the retrieved parameters
+1. **Link Click Before App Installation:**
+   - User clicks a marketing link on mobile web
+   - Server stores device fingerprint with the link information
+   - User is redirected to App Store
+   - After installation, on first launch, SDK automatically retrieves the deep link
+   - User is navigated to the intended content
 
 2. **Marketing Campaign Tracking:**
-   - Create unique tokens for each campaign
-   - Retrieve campaign information using the token on first launch after app installation
-   - Route users to the appropriate screen based on parameters
+   - Track which campaign led to app installation
+   - Direct users to specific onboarding flows or promotional content
+   - Measure campaign effectiveness
+
+3. **Product Sharing:**
+   - User shares a product link
+   - New user clicks the link but doesn't have the app
+   - After installing and opening the app, they're taken directly to the shared product
 
 
