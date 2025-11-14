@@ -132,7 +132,7 @@ public class DeferredDeepLinkService {
             
             if httpResponse.statusCode == 200 {
                 do {
-                    let result = try JSONDecoder().decode(UniversalLinkResponse.self, from: data)
+                    let result = try JSONDecoder().decode(DynamicLinkResponse.self, from: data)
                     completion(.success(result.uri))
                 } catch {
                     completion(.failure(error))
@@ -156,6 +156,6 @@ private struct SuffixResponse: Codable {
     let suffix: String?
 }
 
-private struct UniversalLinkResponse: Codable {
+private struct DynamicLinkResponse: Codable {
     let uri: String
 }
