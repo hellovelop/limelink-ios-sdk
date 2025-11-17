@@ -143,7 +143,7 @@ struct UniversalLinkResponse: Codable {
     
     // MARK: - 헤더 정보를 포함한 Universal Link API 호출
     private func fetchUniversalLinkWithHeaders(suffix: String, linkSuffix: String, headers: [String: String], completion: @escaping (String?) -> Void) {
-        let urlString = "https://www.limelink.org/api/v1/dynamic_link/\(linkSuffix)"
+        let urlString = "https://www.limelink.org//api/v1/app/dynamic_link/\(linkSuffix)"
         
         guard let url = URL(string: urlString) else {
             print("❌ Universal Link URL 생성 실패: \(urlString)")

@@ -103,7 +103,7 @@ public class DeferredDeepLinkService {
         suffix: String,
         completion: @escaping (Result<String, Error>) -> Void
     ) {
-        let urlString = "https://www.limelink.org/api/v1/dynamic_link/\(suffix)"
+        let urlString = "https://www.limelink.org//api/v1/app/dynamic_link/\(suffix)"
         
         guard let url = URL(string: urlString) else {
             completion(.failure(NSError(domain: "Invalid URL", code: 0, userInfo: nil)))

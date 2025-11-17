@@ -132,11 +132,11 @@ class ViewController: UIViewController {
 When accessing `https://{suffix}.limelink.org/link/{link_suffix}`:
 
 1. SDK retrieves header information from the subdomain
-2. Makes a request to `https://www.limelink.org/api/v1/dynamic_link/{link_suffix}` API with header information
+2. Makes a request to `https://www.limelink.org//api/v1/app/dynamic_link/{link_suffix}` API with header information
 3. Returns the `uri` value via completion handler, which contains the link to be handled by the app
 
 #### 2. Direct Access Method
-When directly accessing `https://www.limelink.org/api/v1/dynamic_link/{suffix}`:
+When directly accessing `https://www.limelink.org//api/v1/app/dynamic_link/{suffix}`:
 
 1. SDK makes a direct API request
 2. Returns the `uri` value via completion handler, which contains the link to be handled by the app
@@ -148,12 +148,12 @@ When directly accessing `https://www.limelink.org/api/v1/dynamic_link/{suffix}`:
 // Method 1: Subdomain Access
 // When accessing https://abc123.limelink.org/link/test
 // 1. Collect header information from subdomain
-// 2. Call https://www.limelink.org/api/v1/dynamic_link/test API
+// 2. Call https://www.limelink.org//api/v1/app/dynamic_link/test API
 // 3. API response: {"uri": "abc123://test?test.com"}
 // 4. Return the link via completion handler
 
 // Method 2: Direct Access
-// When accessing https://www.limelink.org/api/v1/dynamic_link/test
+// When accessing https://www.limelink.org//api/v1/app/dynamic_link/test
 // 1. Make direct API call
 // 2. API response: {"uri": "abc123://test?test.com"}
 // 3. Return the link via completion handler
@@ -164,12 +164,12 @@ When directly accessing `https://www.limelink.org/api/v1/dynamic_link/{suffix}`:
 // Method 1: Subdomain Access
 // When accessing https://abc123.limelink.org/link/test
 // 1. Collect header information from subdomain
-// 2. Call https://www.limelink.org/api/v1/dynamic_link/test API
+// 2. Call https://www.limelink.org//api/v1/app/dynamic_link/test API
 // 3. API response: {"uri": "abc123://test?test.com"}
 // 4. Return the link via completion handler
 
 // Method 2: Direct Access
-// When accessing https://www.limelink.org/api/v1/dynamic_link/test
+// When accessing https://www.limelink.org//api/v1/app/dynamic_link/test
 // 1. Make direct API call
 // 2. API response: {"uri": "abc123://test?test.com"}
 // 3. Return the link via completion handler
