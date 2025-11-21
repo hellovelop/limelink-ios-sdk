@@ -279,6 +279,14 @@ The SDK automatically collects the following information to match users:
 - **Screen Height**: Device screen height in points
 - **User Agent**: iOS version in format "iOS 18_7" (e.g., iOS 18.7 → "iOS 18_7")
 
+### Event Tracking
+
+When the SDK successfully retrieves a deferred deep link, it automatically sends tracking information to the server:
+- **full_request_url**: The original URL that was accessed before app installation
+- **event_type**: Set to "setup" to indicate this is a deferred deep link conversion event
+
+This allows you to track successful app installations and first launches that originated from your marketing links.
+
 ### API Flow
 
 ```
@@ -286,9 +294,9 @@ The SDK automatically collects the following information to match users:
    ↓
 2. GET /deferred-deep-link?width=414&height=896&user_agent=iOS 18_7
    ↓
-3. Server returns: {"suffix": "testsub"}
+3. Server returns: {"suffix": "testsub", "full_request_url": "https://example.com/link"}
    ↓
-4. GET /dynamic_link/testsub
+4. GET /dynamic_link/testsub?full_request_url=https://example.com/link&event_type=setup
    ↓
 5. Server returns: {"uri": "myapp://product/123"}
    ↓

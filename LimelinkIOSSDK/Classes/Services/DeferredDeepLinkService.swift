@@ -14,9 +14,12 @@ public class DeferredDeepLinkService {
         // 2. 디퍼드 딥링크 API로 suffix 조회
         fetchSuffix(deviceInfo: deviceInfo) { result in
             switch result {
-            case .success(let suffix):
-                // 3. suffix로 dynamic_link API 호출
-                fetchDynamicLink(suffix: suffix, completion: completion)
+            case .success(let response):
+                let suffix = response.suffix
+                let fullRequestUrl = response.fullRequestUrl
+                
+                // 3. suffix로 dynamic_link API 호출 (full_request_url과 event_type 포함)
+                fetchDynamicLink(suffix: suffix, fullRequestUrl: fullRequestUrl, completion: completion)
                 
             case .failure(let error):
                 completion(.failure(error))
@@ -44,7 +47,7 @@ public class DeferredDeepLinkService {
     // MARK: - Suffix 조회
     private static func fetchSuffix(
         deviceInfo: DeviceInfo,
-        completion: @escaping (Result<String, Error>) -> Void
+        completion: @escaping (Result<(suffix: String, fullRequestUrl: String?), Error>) -> Void
     ) {
         // URL 쿼리 파라미터 생성
         var components = URLComponents(string: "\(baseURL)/deferred-deep-link")!
@@ -84,7 +87,7 @@ public class DeferredDeepLinkService {
                     let result = try JSONDecoder().decode(SuffixResponse.self, from: data)
                     
                     if let suffix = result.suffix {
-                        completion(.success(suffix))
+                        completion(.success((suffix: suffix, fullRequestUrl: result.fullRequestUrl)))
                     } else {
                         // suffix가 없으면 디퍼드 딥링크 매칭 실패
                         completion(.failure(NSError(domain: "No matching deferred deep link", code: 404, userInfo: nil)))
@@ -98,14 +101,23 @@ public class DeferredDeepLinkService {
         }.resume()
     }
     
-    // MARK: - Dynamic Link 조회 (UniversalLink와 동일한 방식)
+    // MARK: - Dynamic Link 조회 (Deferred Deep Link용 - full_request_url과 event_type 포함)
     private static func fetchDynamicLink(
         suffix: String,
+        fullRequestUrl: String? = nil,
         completion: @escaping (Result<String, Error>) -> Void
     ) {
-        let urlString = "https://www.limelink.org//api/v1/app/dynamic_link/\(suffix)"
+        var components = URLComponents(string: "https://www.limelink.org/api/v1/app/dynamic_link/\(suffix)")!
         
-        guard let url = URL(string: urlString) else {
+        // Deferred Deep Link인 경우 쿼리 파라미터 추가
+        if let fullRequestUrl = fullRequestUrl {
+            components.queryItems = [
+                URLQueryItem(name: "full_request_url", value: fullRequestUrl),
+                URLQueryItem(name: "event_type", value: "setup")
+            ]
+        }
+        
+        guard let url = components.url else {
             completion(.failure(NSError(domain: "Invalid URL", code: 0, userInfo: nil)))
             return
         }
@@ -154,6 +166,12 @@ private struct DeviceInfo {
 
 private struct SuffixResponse: Codable {
     let suffix: String?
+    let fullRequestUrl: String?
+    
+    enum CodingKeys: String, CodingKey {
+        case suffix
+        case fullRequestUrl = "full_request_url"
+    }
 }
 
 private struct DynamicLinkResponse: Codable {
