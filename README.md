@@ -129,11 +129,17 @@ class ViewController: UIViewController {
 ### Usage
 
 #### 1. Subdomain Method (Recommended)
-When accessing `https://{suffix}.limelink.org/link/{link_suffix}`:
+When accessing `https://{suffix}.limelink.org/link/{link_suffix}` or `https://{suffix}.limelink.org/link/{link_suffix}?test=1&value=2`:
 
 1. SDK retrieves header information from the subdomain
-2. Makes a request to `https://www.limelink.org/api/v1/app/dynamic_link/{link_suffix}` API with header information
-3. Returns the `uri` value via completion handler, which contains the link to be handled by the app
+2. Captures the full request URL including query strings (e.g., `?test=1&value=2`)
+3. Makes a request to `https://www.limelink.org/api/v1/app/dynamic_link/{link_suffix}?full_request_url={encoded_url}` API with header information
+4. Returns the `uri` value via completion handler, which contains the link to be handled by the app
+
+**Query String Support:**
+- All query parameters in the original URL are preserved and sent to the API
+- Example: `https://abc123.limelink.org/link/test?campaign=summer&source=email`
+- API call: `https://www.limelink.org/api/v1/app/dynamic_link/test?full_request_url=https://abc123.limelink.org/link/test?campaign=summer&source=email`
 
 #### 2. Direct Access Method
 When directly accessing `https://www.limelink.org/api/v1/app/dynamic_link/{suffix}`:
@@ -145,12 +151,13 @@ When directly accessing `https://www.limelink.org/api/v1/app/dynamic_link/{suffi
 
 **Swift:**
 ```swift
-// Method 1: Subdomain Access
-// When accessing https://abc123.limelink.org/link/test
+// Method 1: Subdomain Access (with query strings)
+// When accessing https://abc123.limelink.org/link/test?campaign=summer&source=email
 // 1. Collect header information from subdomain
-// 2. Call https://www.limelink.org/api/v1/app/dynamic_link/test API
-// 3. API response: {"uri": "abc123://test?test.com"}
-// 4. Return the link via completion handler
+// 2. Capture full URL with query strings
+// 3. Call https://www.limelink.org/api/v1/app/dynamic_link/test?full_request_url=https://abc123.limelink.org/link/test?campaign=summer&source=email
+// 4. API response: {"uri": "abc123://test?campaign=summer&source=email"}
+// 5. Return the link via completion handler
 
 // Method 2: Direct Access
 // When accessing https://www.limelink.org/api/v1/app/dynamic_link/test
@@ -161,12 +168,13 @@ When directly accessing `https://www.limelink.org/api/v1/app/dynamic_link/{suffi
 
 **Objective-C:**
 ```objc
-// Method 1: Subdomain Access
-// When accessing https://abc123.limelink.org/link/test
+// Method 1: Subdomain Access (with query strings)
+// When accessing https://abc123.limelink.org/link/test?campaign=summer&source=email
 // 1. Collect header information from subdomain
-// 2. Call https://www.limelink.org/api/v1/app/dynamic_link/test API
-// 3. API response: {"uri": "abc123://test?test.com"}
-// 4. Return the link via completion handler
+// 2. Capture full URL with query strings
+// 3. Call https://www.limelink.org/api/v1/app/dynamic_link/test?full_request_url=https://abc123.limelink.org/link/test?campaign=summer&source=email
+// 4. API response: {"uri": "abc123://test?campaign=summer&source=email"}
+// 5. Return the link via completion handler
 
 // Method 2: Direct Access
 // When accessing https://www.limelink.org/api/v1/app/dynamic_link/test

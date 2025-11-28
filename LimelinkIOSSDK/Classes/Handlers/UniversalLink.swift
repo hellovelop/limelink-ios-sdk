@@ -61,12 +61,15 @@ struct UniversalLinkResponse: Codable {
         
         let linkSuffix = String(path[linkSuffixRange])
         
+        // 전체 요청 URL (쿼리 스트링 포함)
+        let fullRequestUrl = url.absoluteString
+        
         // 먼저 서브도메인에서 헤더 정보 가져오기
         fetchSubdomainHeaders(suffix: suffix) { [weak self] headers in
             guard let self = self else { return }
             
             // 헤더 정보를 사용하여 Universal Link API 호출
-            self.fetchUniversalLinkWithHeaders(suffix: suffix, linkSuffix: linkSuffix, headers: headers) { uri in
+            self.fetchUniversalLinkWithHeaders(suffix: suffix, linkSuffix: linkSuffix, fullRequestUrl: fullRequestUrl, headers: headers) { uri in
                 completion(uri)
             }
         }
@@ -142,11 +145,15 @@ struct UniversalLinkResponse: Codable {
     }
     
     // MARK: - 헤더 정보를 포함한 Universal Link API 호출
-    private func fetchUniversalLinkWithHeaders(suffix: String, linkSuffix: String, headers: [String: String], completion: @escaping (String?) -> Void) {
-        let urlString = "https://www.limelink.org/api/v1/app/dynamic_link/\(linkSuffix)"
+    private func fetchUniversalLinkWithHeaders(suffix: String, linkSuffix: String, fullRequestUrl: String, headers: [String: String], completion: @escaping (String?) -> Void) {
+        // URLComponents를 사용하여 쿼리 파라미터 추가
+        var components = URLComponents(string: "https://www.limelink.org/api/v1/app/dynamic_link/\(linkSuffix)")!
+        components.queryItems = [
+            URLQueryItem(name: "full_request_url", value: fullRequestUrl)
+        ]
         
-        guard let url = URL(string: urlString) else {
-            print("❌ Universal Link URL 생성 실패: \(urlString)")
+        guard let url = components.url else {
+            print("❌ Universal Link URL 생성 실패")
             completion(nil)
             return
         }
