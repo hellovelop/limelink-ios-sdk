@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'LimelinkIOSSDK'
-  s.version          = '0.1.48'
+  s.version          = '0.2.0'
   s.summary          = 'Limelink iOS SDK for analytics, deep linking, universal links, and deferred deep links.'
 
 # This description is used to generate tags and improve search results.
