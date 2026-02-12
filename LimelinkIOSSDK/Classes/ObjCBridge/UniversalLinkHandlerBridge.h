@@ -11,8 +11,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface UniversalLinkHandlerBridge : NSObject
 
+/// Handle universal link through LimeLinkSDK (recommended)
 + (void)handleUniversalLink:(NSURL *)url;
 
+/// Handle universal link with completion handler
++ (void)handleUniversalLink:(NSURL *)url completion:(void (^)(NSString * _Nullable uri))completion;
+
 @end
- 
+
 NS_ASSUME_NONNULL_END
