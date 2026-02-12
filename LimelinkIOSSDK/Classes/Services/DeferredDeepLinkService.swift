@@ -2,25 +2,28 @@ import Foundation
 import UIKit
 
 public class DeferredDeepLinkService {
-    private static let baseURL = "https://limelink.org/api/v1"
-    
+    private static let defaultBaseURL = "https://limelink.org/"
+
     // MARK: - 디퍼드 딥링크 조회 (핑거프린팅 방식)
     public static func getDeferredDeepLink(
+        baseUrl: String? = nil,
         completion: @escaping (Result<String, Error>) -> Void
     ) {
+        let effectiveBaseUrl = baseUrl ?? defaultBaseURL
+
         // 1. 디바이스 정보 수집
         let deviceInfo = getDeviceInfo()
-        
+
         // 2. 디퍼드 딥링크 API로 suffix 조회
-        fetchSuffix(deviceInfo: deviceInfo) { result in
+        fetchSuffix(baseUrl: effectiveBaseUrl, deviceInfo: deviceInfo) { result in
             switch result {
             case .success(let response):
                 let suffix = response.suffix
                 let fullRequestUrl = response.fullRequestUrl
-                
+
                 // 3. suffix로 dynamic_link API 호출 (full_request_url과 event_type 포함)
-                fetchDynamicLink(suffix: suffix, fullRequestUrl: fullRequestUrl, completion: completion)
-                
+                fetchDynamicLink(baseUrl: effectiveBaseUrl, suffix: suffix, fullRequestUrl: fullRequestUrl, completion: completion)
+
             case .failure(let error):
                 completion(.failure(error))
             }
@@ -46,11 +49,13 @@ public class DeferredDeepLinkService {
     
     // MARK: - Suffix 조회
     private static func fetchSuffix(
+        baseUrl: String,
         deviceInfo: DeviceInfo,
         completion: @escaping (Result<(suffix: String, fullRequestUrl: String?), Error>) -> Void
     ) {
+        let apiBase = baseUrl.hasSuffix("/") ? baseUrl + "api/v1" : baseUrl + "/api/v1"
         // URL 쿼리 파라미터 생성
-        var components = URLComponents(string: "\(baseURL)/deferred-deep-link")!
+        var components = URLComponents(string: "\(apiBase)/deferred-deep-link")!
         components.queryItems = [
             URLQueryItem(name: "width", value: String(deviceInfo.width)),
             URLQueryItem(name: "height", value: String(deviceInfo.height)),
@@ -103,11 +108,13 @@ public class DeferredDeepLinkService {
     
     // MARK: - Dynamic Link 조회 (Deferred Deep Link용 - full_request_url과 event_type 포함)
     private static func fetchDynamicLink(
+        baseUrl: String,
         suffix: String,
         fullRequestUrl: String? = nil,
         completion: @escaping (Result<String, Error>) -> Void
     ) {
-        var components = URLComponents(string: "https://www.limelink.org/api/v1/app/dynamic_link/\(suffix)")!
+        let apiBase = baseUrl.hasSuffix("/") ? baseUrl + "api/v1" : baseUrl + "/api/v1"
+        var components = URLComponents(string: "\(apiBase)/app/dynamic_link/\(suffix)")!
         
         // Deferred Deep Link인 경우 쿼리 파라미터 추가
         if let fullRequestUrl = fullRequestUrl {
