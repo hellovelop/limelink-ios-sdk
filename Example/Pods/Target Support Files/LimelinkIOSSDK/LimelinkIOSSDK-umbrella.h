@@ -10,6 +10,7 @@
 #endif
 #endif
 
+#import "UniversalLinkHandlerBridge.h"
 
 FOUNDATION_EXPORT double LimelinkIOSSDKVersionNumber;
 FOUNDATION_EXPORT const unsigned char LimelinkIOSSDKVersionString[];

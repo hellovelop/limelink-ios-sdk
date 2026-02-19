@@ -7,34 +7,40 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		14A8AE0C4B79C68CB681F66D0CCCB6C2 /* LimelinkIOSSDK-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B6021329F9500925452F3D0D59263B50 /* LimelinkIOSSDK-dummy.m */; };
-		3D9A973B262F7D8C8D2D65658D6F440C /* Pods-LimelinkIOSSDK_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D2DC19A6826ABC0A0EA47D163EAF6507 /* Pods-LimelinkIOSSDK_Example-dummy.m */; };
-		527E67632E487D1E003D447D /* UniversalLinkHandlerBridge.h in Headers */ = {isa = PBXBuildFile; fileRef = 527E675E2E487D1E003D447D /* UniversalLinkHandlerBridge.h */; };
-		527E67642E487D1E003D447D /* UniversalLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527E67542E487D1E003D447D /* UniversalLink.swift */; };
-		527E67652E487D1E003D447D /* LimelinkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527E67612E487D1E003D447D /* LimelinkService.swift */; };
-		527E67662E487D1E003D447D /* UrlHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527E67552E487D1E003D447D /* UrlHandler.swift */; };
-		527E67672E487D1E003D447D /* EventType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527E67572E487D1E003D447D /* EventType.swift */; };
-		527E67682E487D1E003D447D /* PathParamResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527E675B2E487D1E003D447D /* PathParamResponse.swift */; };
-		527E67692E487D1E003D447D /* UniversalLinkHandlerBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 527E675F2E487D1E003D447D /* UniversalLinkHandlerBridge.m */; };
-		527E676A2E487D1E003D447D /* LimeLinkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527E67592E487D1E003D447D /* LimeLinkRequest.swift */; };
-		542B8AE8AF17A453495AD105A0BCEF2B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		8C3A0F580DC9D4B3434340E89FC7C4F7 /* Pods-LimelinkIOSSDK_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 915C24BF19E85B998D8E886BC0B711A9 /* Pods-LimelinkIOSSDK_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		97FE0CC810E2E08E0ADF5BA1AC65467B /* Pods-LimelinkIOSSDK_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 754C2F5C70EB3F148B0DBE94F51658BF /* Pods-LimelinkIOSSDK_Tests-dummy.m */; };
-		A77DE839882053A524192BF0C11AE176 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		ACD367E25C8105667FD7520F8268A2B2 /* Pods-LimelinkIOSSDK_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D3F051426178C319C49DCC6469513ED2 /* Pods-LimelinkIOSSDK_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CA30F45FDF4BCDC9A83DAD870D4B43E1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		EABAEBB379AB525823C3A96642E42DD1 /* LimelinkIOSSDK-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = ACF980FC17E55D33A50CEF89999D6B24 /* LimelinkIOSSDK-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		15FF567263F1DA264ADF73506A332630 /* UniversalLinkHandlerBridge.h in Headers */ = {isa = PBXBuildFile; fileRef = E953006C8477157041EF06C7CABFA544 /* UniversalLinkHandlerBridge.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		203B0AEFCF36D73348452D3493D1768D /* LimeLinkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5E9F29990F23B9847C4E8619E95CB0 /* LimeLinkError.swift */; };
+		32639A35BDD573EF078430F7326F244E /* LimeLinkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259D3D733117C9A0021A0F590387DF35 /* LimeLinkRequest.swift */; };
+		43EB8EA37876089DFE4C9AA9FC5DF132 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 384DDA2CB25005BD6479B5987C619DD4 /* Foundation.framework */; };
+		5452F228DF020F458B505008BD77C171 /* PathParamResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D23527202589996E78F526725D7554E /* PathParamResponse.swift */; };
+		64F9C9F41D1359F492A09A62FE0322D7 /* Pods-LimelinkIOSSDK_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 915C24BF19E85B998D8E886BC0B711A9 /* Pods-LimelinkIOSSDK_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6A963B481920E0FFC71C4312E0BE8311 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 384DDA2CB25005BD6479B5987C619DD4 /* Foundation.framework */; };
+		7718929F9B7CA55E50CD308D37CBDDA3 /* LimelinkIOSSDK-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D2652ACF80E85B08E5C4013A5CA13D4B /* LimelinkIOSSDK-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		79BD1C9589AD133D03ABB7947D4D99AF /* Pods-LimelinkIOSSDK_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D2DC19A6826ABC0A0EA47D163EAF6507 /* Pods-LimelinkIOSSDK_Example-dummy.m */; };
+		7A0658204FBFAE4CF764483C98C058C4 /* LimeLinkSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F1107F285D5E9B40F2E40A919FBBFD /* LimeLinkSDK.swift */; };
+		89B665158FC067EB01C079E5EDD0C9C9 /* Pods-LimelinkIOSSDK_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D3F051426178C319C49DCC6469513ED2 /* Pods-LimelinkIOSSDK_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9E84D2FF55EDE16D5D1220989FEB436F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 384DDA2CB25005BD6479B5987C619DD4 /* Foundation.framework */; };
+		9E9A46FE1EAE3145B549C4DFFC7CB05F /* LimeLinkConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465C732B44E1614B3A3CC8656B3CFB11 /* LimeLinkConfig.swift */; };
+		9FAB123E22755CAD27BAADDBF58E951D /* UniversalLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF83A4E583AB46E0566E4CC33FCFDB9D /* UniversalLink.swift */; };
+		A7D60DBB819414E30B78A85211693E10 /* EventType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C58E433EFA2B0CBD155FD4151E77072 /* EventType.swift */; };
+		C97E57AB89842E29632AE62F4AFD309D /* UrlHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05707E6C74B1649A0E436F695754FD16 /* UrlHandler.swift */; };
+		D2ABBABD07155DA5805B60DB2CA38D48 /* LimeLinkListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2F4E253D00A33328162F612526B4A1 /* LimeLinkListener.swift */; };
+		D67A3343BB4FFDD5A07AEE7019115BC1 /* LimeLinkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56EBF41226D3168C86A700A90BA1287 /* LimeLinkResult.swift */; };
+		DB765207FDB84E8F9BEABFB75608E874 /* LimelinkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1B8A299F58B3F8259F882D746073E7 /* LimelinkService.swift */; };
+		E4FF7963FA5762748EBACBB6C028FB20 /* DeferredDeepLinkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCBF11E582C607B6629F7CDA91DA093 /* DeferredDeepLinkService.swift */; };
+		F9960A1A514E9B2D4A5A9A77EA0DF27F /* LimelinkIOSSDK-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B991CB7D5C12DB01AE58D7150D118B4F /* LimelinkIOSSDK-dummy.m */; };
+		FA81AFE673BF81C768AE34E4964D27B8 /* Pods-LimelinkIOSSDK_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 754C2F5C70EB3F148B0DBE94F51658BF /* Pods-LimelinkIOSSDK_Tests-dummy.m */; };
+		FCF0C3D7705528B538C72E70CB554EE9 /* UniversalLinkHandlerBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3D0DDCBC3675B886182944EAA1C074 /* UniversalLinkHandlerBridge.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		745090511BD84017F61D16E8424FE1C9 /* PBXContainerItemProxy */ = {
+		5A596EAAED98628DF2854C714800F964 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 5598DA2834748B88E9A691658BC79257;
 			remoteInfo = LimelinkIOSSDK;
 		};
-		914710428DE52D5843546DD4769ABEA0 /* PBXContainerItemProxy */ = {
+		8653625D6E891DC58E66C654C97C655D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
@@ -45,172 +51,139 @@
 
 /* Begin PBXFileReference section */
 		00CF4BACD083D3E34218A89BAA7DCEB9 /* Pods-LimelinkIOSSDK_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LimelinkIOSSDK_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		0129BFD05400E9FBC305C3E75C607EDE /* LimelinkIOSSDK.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = LimelinkIOSSDK.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		0135522BB329032C1CC9E33ED8936B76 /* Pods-LimelinkIOSSDK_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LimelinkIOSSDK_Example.release.xcconfig"; sourceTree = "<group>"; };
+		05707E6C74B1649A0E436F695754FD16 /* UrlHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UrlHandler.swift; sourceTree = "<group>"; };
 		06C60B94505061E6C53610BD4AD39539 /* Pods-LimelinkIOSSDK_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LimelinkIOSSDK_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		088FCA950F7F199A38C15EA88F96FBD3 /* LimelinkIOSSDK-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LimelinkIOSSDK-prefix.pch"; sourceTree = "<group>"; };
 		0A28AC3A9007D76D99E7B89DBCE8A021 /* Pods-LimelinkIOSSDK_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LimelinkIOSSDK_Example-Info.plist"; sourceTree = "<group>"; };
 		0B43EE9F5DB1671BDB2F51F9A27AC0A6 /* Pods-LimelinkIOSSDK_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-LimelinkIOSSDK_Tests.modulemap"; sourceTree = "<group>"; };
 		15B89FC3872FC5D3F03C47C2DB11BE11 /* Pods-LimelinkIOSSDK_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LimelinkIOSSDK_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		1AADFB8144932F8CE761C08E784990AB /* LimelinkIOSSDK-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LimelinkIOSSDK-prefix.pch"; sourceTree = "<group>"; };
+		1C58E433EFA2B0CBD155FD4151E77072 /* EventType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EventType.swift; sourceTree = "<group>"; };
 		21C0900E16657641C26B948A9A7E124C /* Pods-LimelinkIOSSDK_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LimelinkIOSSDK_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		259D3D733117C9A0021A0F590387DF35 /* LimeLinkRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LimeLinkRequest.swift; sourceTree = "<group>"; };
+		384DDA2CB25005BD6479B5987C619DD4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		3BE36B86F6509D106AB04654D9832C0C /* Pods-LimelinkIOSSDK_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LimelinkIOSSDK_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		4D0BFB92D2529B0FA1DA9A462F48FA9A /* LimelinkIOSSDK-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "LimelinkIOSSDK-Info.plist"; sourceTree = "<group>"; };
-		527E67542E487D1E003D447D /* UniversalLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversalLink.swift; sourceTree = "<group>"; };
-		527E67552E487D1E003D447D /* UrlHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlHandler.swift; sourceTree = "<group>"; };
-		527E67572E487D1E003D447D /* EventType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventType.swift; sourceTree = "<group>"; };
-		527E67592E487D1E003D447D /* LimeLinkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LimeLinkRequest.swift; sourceTree = "<group>"; };
-		527E675B2E487D1E003D447D /* PathParamResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathParamResponse.swift; sourceTree = "<group>"; };
-		527E675E2E487D1E003D447D /* UniversalLinkHandlerBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UniversalLinkHandlerBridge.h; sourceTree = "<group>"; };
-		527E675F2E487D1E003D447D /* UniversalLinkHandlerBridge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UniversalLinkHandlerBridge.m; sourceTree = "<group>"; };
-		527E67612E487D1E003D447D /* LimelinkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LimelinkService.swift; sourceTree = "<group>"; };
+		465C732B44E1614B3A3CC8656B3CFB11 /* LimeLinkConfig.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LimeLinkConfig.swift; sourceTree = "<group>"; };
+		50F1107F285D5E9B40F2E40A919FBBFD /* LimeLinkSDK.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LimeLinkSDK.swift; path = LimelinkIOSSDK/Classes/LimeLinkSDK.swift; sourceTree = "<group>"; };
+		52A258BC4F881A2BCDD4C6D5F1C2E675 /* LimelinkIOSSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LimelinkIOSSDK.release.xcconfig; sourceTree = "<group>"; };
 		5AB3B4832EEA0F338E0684FCB359DBF4 /* Pods-LimelinkIOSSDK_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LimelinkIOSSDK_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		618DECF6CEFC162B9EA35CF81689A19B /* Pods_LimelinkIOSSDK_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LimelinkIOSSDK_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		618DECF6CEFC162B9EA35CF81689A19B /* Pods-LimelinkIOSSDK_Tests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-LimelinkIOSSDK_Tests"; path = Pods_LimelinkIOSSDK_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BEB9600CD0296CB978C1371ECB4BB73 /* Pods-LimelinkIOSSDK_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LimelinkIOSSDK_Tests-Info.plist"; sourceTree = "<group>"; };
-		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		6D23527202589996E78F526725D7554E /* PathParamResponse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PathParamResponse.swift; sourceTree = "<group>"; };
+		6E5E9F29990F23B9847C4E8619E95CB0 /* LimeLinkError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LimeLinkError.swift; sourceTree = "<group>"; };
+		6F3D0DDCBC3675B886182944EAA1C074 /* UniversalLinkHandlerBridge.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = UniversalLinkHandlerBridge.m; sourceTree = "<group>"; };
 		754C2F5C70EB3F148B0DBE94F51658BF /* Pods-LimelinkIOSSDK_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LimelinkIOSSDK_Tests-dummy.m"; sourceTree = "<group>"; };
-		7A63A13FE9401F1FE6DDC8C64733A50F /* LimelinkIOSSDK.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = LimelinkIOSSDK.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		7F0832B027A9C5523BCBD5328528D500 /* LimelinkIOSSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LimelinkIOSSDK.debug.xcconfig; sourceTree = "<group>"; };
+		77997E31CC6A8E8AF92ABBBBC5A6B535 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		7FCB7C7C5C3853D2AD53B33162E0C4DD /* Pods-LimelinkIOSSDK_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-LimelinkIOSSDK_Example.modulemap"; sourceTree = "<group>"; };
 		915C24BF19E85B998D8E886BC0B711A9 /* Pods-LimelinkIOSSDK_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LimelinkIOSSDK_Example-umbrella.h"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; };
-		ACF980FC17E55D33A50CEF89999D6B24 /* LimelinkIOSSDK-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LimelinkIOSSDK-umbrella.h"; sourceTree = "<group>"; };
-		B5B7439C5367FF26CB84145807907C08 /* LimelinkIOSSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LimelinkIOSSDK.release.xcconfig; sourceTree = "<group>"; };
-		B6021329F9500925452F3D0D59263B50 /* LimelinkIOSSDK-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LimelinkIOSSDK-dummy.m"; sourceTree = "<group>"; };
-		B7620AB97E818301E8D4B0369DB0429D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9FFEB2A2F4A26568133F543FF3B460AF /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		AF83A4E583AB46E0566E4CC33FCFDB9D /* UniversalLink.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UniversalLink.swift; sourceTree = "<group>"; };
+		B5B31082714783738FF589FAB90D5831 /* LimelinkIOSSDK-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "LimelinkIOSSDK-Info.plist"; sourceTree = "<group>"; };
+		B991CB7D5C12DB01AE58D7150D118B4F /* LimelinkIOSSDK-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LimelinkIOSSDK-dummy.m"; sourceTree = "<group>"; };
+		BF6FC2522A34E5E7F2845D72DE0C1C55 /* LimelinkIOSSDK.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = LimelinkIOSSDK.modulemap; sourceTree = "<group>"; };
+		BFCBF11E582C607B6629F7CDA91DA093 /* DeferredDeepLinkService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DeferredDeepLinkService.swift; sourceTree = "<group>"; };
 		C51A838E440C738B701ED84B05204838 /* Pods-LimelinkIOSSDK_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LimelinkIOSSDK_Example-frameworks.sh"; sourceTree = "<group>"; };
-		D25A2BD66FDF3DA72AD5AB95DF4CEFB2 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		C56EBF41226D3168C86A700A90BA1287 /* LimeLinkResult.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LimeLinkResult.swift; sourceTree = "<group>"; };
+		D2652ACF80E85B08E5C4013A5CA13D4B /* LimelinkIOSSDK-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LimelinkIOSSDK-umbrella.h"; sourceTree = "<group>"; };
 		D2DC19A6826ABC0A0EA47D163EAF6507 /* Pods-LimelinkIOSSDK_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LimelinkIOSSDK_Example-dummy.m"; sourceTree = "<group>"; };
 		D3F051426178C319C49DCC6469513ED2 /* Pods-LimelinkIOSSDK_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LimelinkIOSSDK_Tests-umbrella.h"; sourceTree = "<group>"; };
 		D9CE87BDA95AA740E6107C4B0267C509 /* Pods-LimelinkIOSSDK_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LimelinkIOSSDK_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		DF6E689842ED76EEF288F64EC1ED2E52 /* Pods_LimelinkIOSSDK_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LimelinkIOSSDK_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EDA8B88FF6E0A80A8048F508F28918AF /* LimelinkIOSSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LimelinkIOSSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F86C1A46F42B113E3BF1C28D52E8A645 /* LimelinkIOSSDK.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = LimelinkIOSSDK.modulemap; sourceTree = "<group>"; };
+		DC1B8A299F58B3F8259F882D746073E7 /* LimelinkService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LimelinkService.swift; sourceTree = "<group>"; };
+		DF6E689842ED76EEF288F64EC1ED2E52 /* Pods-LimelinkIOSSDK_Example */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-LimelinkIOSSDK_Example"; path = Pods_LimelinkIOSSDK_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E953006C8477157041EF06C7CABFA544 /* UniversalLinkHandlerBridge.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = UniversalLinkHandlerBridge.h; sourceTree = "<group>"; };
+		EDA8B88FF6E0A80A8048F508F28918AF /* LimelinkIOSSDK */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = LimelinkIOSSDK; path = LimelinkIOSSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF2F4E253D00A33328162F612526B4A1 /* LimeLinkListener.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LimeLinkListener.swift; path = LimelinkIOSSDK/Classes/LimeLinkListener.swift; sourceTree = "<group>"; };
+		F276F1A58167372FB05E2AF92DCBD5B4 /* LimelinkIOSSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LimelinkIOSSDK.debug.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		6A2A36A0C5A14494CC8BACA145A51EE0 /* Frameworks */ = {
+		2CFC43ADAE49393DCBB3E40C336CECD1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CA30F45FDF4BCDC9A83DAD870D4B43E1 /* Foundation.framework in Frameworks */,
+				43EB8EA37876089DFE4C9AA9FC5DF132 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6EC6D6C20FC592AC58D15F8FC96F8B72 /* Frameworks */ = {
+		73A3B763258B31B909630CA13BAC456F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				542B8AE8AF17A453495AD105A0BCEF2B /* Foundation.framework in Frameworks */,
+				6A963B481920E0FFC71C4312E0BE8311 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		ACAB7C8411BCB81D9F20718E8C78909D /* Frameworks */ = {
+		C418362A90C98FD7FF4C5B55B866170E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A77DE839882053A524192BF0C11AE176 /* Foundation.framework in Frameworks */,
+				9E84D2FF55EDE16D5D1220989FEB436F /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		05E62BD66F90C7553C01211C51EFCCDC /* Support Files */ = {
+		136AEC7291BE384C6E8BBFD3AD82616A /* ObjCBridge */ = {
 			isa = PBXGroup;
 			children = (
-				F86C1A46F42B113E3BF1C28D52E8A645 /* LimelinkIOSSDK.modulemap */,
-				B6021329F9500925452F3D0D59263B50 /* LimelinkIOSSDK-dummy.m */,
-				4D0BFB92D2529B0FA1DA9A462F48FA9A /* LimelinkIOSSDK-Info.plist */,
-				1AADFB8144932F8CE761C08E784990AB /* LimelinkIOSSDK-prefix.pch */,
-				ACF980FC17E55D33A50CEF89999D6B24 /* LimelinkIOSSDK-umbrella.h */,
-				7F0832B027A9C5523BCBD5328528D500 /* LimelinkIOSSDK.debug.xcconfig */,
-				B5B7439C5367FF26CB84145807907C08 /* LimelinkIOSSDK.release.xcconfig */,
+				E953006C8477157041EF06C7CABFA544 /* UniversalLinkHandlerBridge.h */,
+				6F3D0DDCBC3675B886182944EAA1C074 /* UniversalLinkHandlerBridge.m */,
+			);
+			name = ObjCBridge;
+			path = LimelinkIOSSDK/Classes/ObjCBridge;
+			sourceTree = "<group>";
+		};
+		13B1197AFD8D617AB86E2CE494B09048 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9FA4C2F66EF538F55EAB6A91D3C510AF /* LimelinkIOSSDK */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		44F7FCFF8ABF4F6A2A9352357FC0E24C /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				465C732B44E1614B3A3CC8656B3CFB11 /* LimeLinkConfig.swift */,
+			);
+			name = Config;
+			path = LimelinkIOSSDK/Classes/Config;
+			sourceTree = "<group>";
+		};
+		5222EEC50566DE8759BB4DD37F9A7992 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				77997E31CC6A8E8AF92ABBBBC5A6B535 /* LICENSE */,
+				0129BFD05400E9FBC305C3E75C607EDE /* LimelinkIOSSDK.podspec */,
+				9FFEB2A2F4A26568133F543FF3B460AF /* README.md */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		5EE64199BAB0BE2316337E733B0232CD /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				BF6FC2522A34E5E7F2845D72DE0C1C55 /* LimelinkIOSSDK.modulemap */,
+				B991CB7D5C12DB01AE58D7150D118B4F /* LimelinkIOSSDK-dummy.m */,
+				B5B31082714783738FF589FAB90D5831 /* LimelinkIOSSDK-Info.plist */,
+				088FCA950F7F199A38C15EA88F96FBD3 /* LimelinkIOSSDK-prefix.pch */,
+				D2652ACF80E85B08E5C4013A5CA13D4B /* LimelinkIOSSDK-umbrella.h */,
+				F276F1A58167372FB05E2AF92DCBD5B4 /* LimelinkIOSSDK.debug.xcconfig */,
+				52A258BC4F881A2BCDD4C6D5F1C2E675 /* LimelinkIOSSDK.release.xcconfig */,
 			);
 			name = "Support Files";
 			path = "Example/Pods/Target Support Files/LimelinkIOSSDK";
 			sourceTree = "<group>";
 		};
-		1071D83693503FD424B6D45AED92FFB9 /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				A5B0350F0B51DAC6609F016578B494D6 /* LimelinkIOSSDK */,
-			);
-			name = "Development Pods";
-			sourceTree = "<group>";
-		};
-		527E67562E487D1E003D447D /* Handlers */ = {
-			isa = PBXGroup;
-			children = (
-				527E67542E487D1E003D447D /* UniversalLink.swift */,
-				527E67552E487D1E003D447D /* UrlHandler.swift */,
-			);
-			path = Handlers;
-			sourceTree = "<group>";
-		};
-		527E67582E487D1E003D447D /* Enums */ = {
-			isa = PBXGroup;
-			children = (
-				527E67572E487D1E003D447D /* EventType.swift */,
-			);
-			path = Enums;
-			sourceTree = "<group>";
-		};
-		527E675A2E487D1E003D447D /* Request */ = {
-			isa = PBXGroup;
-			children = (
-				527E67592E487D1E003D447D /* LimeLinkRequest.swift */,
-			);
-			path = Request;
-			sourceTree = "<group>";
-		};
-		527E675C2E487D1E003D447D /* Response */ = {
-			isa = PBXGroup;
-			children = (
-				527E675B2E487D1E003D447D /* PathParamResponse.swift */,
-			);
-			path = Response;
-			sourceTree = "<group>";
-		};
-		527E675D2E487D1E003D447D /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				527E67582E487D1E003D447D /* Enums */,
-				527E675A2E487D1E003D447D /* Request */,
-				527E675C2E487D1E003D447D /* Response */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		527E67602E487D1E003D447D /* ObjCBridge */ = {
-			isa = PBXGroup;
-			children = (
-				527E675E2E487D1E003D447D /* UniversalLinkHandlerBridge.h */,
-				527E675F2E487D1E003D447D /* UniversalLinkHandlerBridge.m */,
-			);
-			path = ObjCBridge;
-			sourceTree = "<group>";
-		};
-		527E67622E487D1E003D447D /* Services */ = {
-			isa = PBXGroup;
-			children = (
-				527E67612E487D1E003D447D /* LimelinkService.swift */,
-			);
-			path = Services;
-			sourceTree = "<group>";
-		};
-		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
 		6DFCD24F46035CE3C2646528B7635B1D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				EDA8B88FF6E0A80A8048F508F28918AF /* LimelinkIOSSDK.framework */,
-				DF6E689842ED76EEF288F64EC1ED2E52 /* Pods_LimelinkIOSSDK_Example.framework */,
-				618DECF6CEFC162B9EA35CF81689A19B /* Pods_LimelinkIOSSDK_Tests.framework */,
+				EDA8B88FF6E0A80A8048F508F28918AF /* LimelinkIOSSDK */,
+				DF6E689842ED76EEF288F64EC1ED2E52 /* Pods-LimelinkIOSSDK_Example */,
+				618DECF6CEFC162B9EA35CF81689A19B /* Pods-LimelinkIOSSDK_Tests */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -241,35 +214,69 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		A5B0350F0B51DAC6609F016578B494D6 /* LimelinkIOSSDK */ = {
+		83C37D7F0F5E673F718E3583ED1C13A1 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				527E67562E487D1E003D447D /* Handlers */,
-				527E675D2E487D1E003D447D /* Models */,
-				527E67602E487D1E003D447D /* ObjCBridge */,
-				527E67622E487D1E003D447D /* Services */,
-				AC4EE15674AC468D085360C1D5F2115D /* Pod */,
-				05E62BD66F90C7553C01211C51EFCCDC /* Support Files */,
+				8D398D72F52A909102F186D44AD4C647 /* Enums */,
+				DA2C4D59E663A3F082B4D12D84705EB8 /* Request */,
+				858CCFB50D1C528C6A7A67A2ED589552 /* Response */,
+			);
+			name = Models;
+			path = LimelinkIOSSDK/Classes/Models;
+			sourceTree = "<group>";
+		};
+		858CCFB50D1C528C6A7A67A2ED589552 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				6E5E9F29990F23B9847C4E8619E95CB0 /* LimeLinkError.swift */,
+				C56EBF41226D3168C86A700A90BA1287 /* LimeLinkResult.swift */,
+				6D23527202589996E78F526725D7554E /* PathParamResponse.swift */,
+			);
+			name = Response;
+			path = Response;
+			sourceTree = "<group>";
+		};
+		8D398D72F52A909102F186D44AD4C647 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				1C58E433EFA2B0CBD155FD4151E77072 /* EventType.swift */,
+			);
+			name = Enums;
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		9FA4C2F66EF538F55EAB6A91D3C510AF /* LimelinkIOSSDK */ = {
+			isa = PBXGroup;
+			children = (
+				EF2F4E253D00A33328162F612526B4A1 /* LimeLinkListener.swift */,
+				50F1107F285D5E9B40F2E40A919FBBFD /* LimeLinkSDK.swift */,
+				44F7FCFF8ABF4F6A2A9352357FC0E24C /* Config */,
+				F52F3C58340B45BBFFAC118D6A565655 /* Handlers */,
+				83C37D7F0F5E673F718E3583ED1C13A1 /* Models */,
+				136AEC7291BE384C6E8BBFD3AD82616A /* ObjCBridge */,
+				5222EEC50566DE8759BB4DD37F9A7992 /* Pod */,
+				AD5BBBFB81D930002BDAEF3C28CC470C /* Services */,
+				5EE64199BAB0BE2316337E733B0232CD /* Support Files */,
 			);
 			name = LimelinkIOSSDK;
 			path = ../..;
 			sourceTree = "<group>";
 		};
-		AC4EE15674AC468D085360C1D5F2115D /* Pod */ = {
+		AD5BBBFB81D930002BDAEF3C28CC470C /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				B7620AB97E818301E8D4B0369DB0429D /* LICENSE */,
-				7A63A13FE9401F1FE6DDC8C64733A50F /* LimelinkIOSSDK.podspec */,
-				D25A2BD66FDF3DA72AD5AB95DF4CEFB2 /* README.md */,
+				BFCBF11E582C607B6629F7CDA91DA093 /* DeferredDeepLinkService.swift */,
+				DC1B8A299F58B3F8259F882D746073E7 /* LimelinkService.swift */,
 			);
-			name = Pod;
+			name = Services;
+			path = LimelinkIOSSDK/Classes/Services;
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				1071D83693503FD424B6D45AED92FFB9 /* Development Pods */,
+				13B1197AFD8D617AB86E2CE494B09048 /* Development Pods */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
 				6DFCD24F46035CE3C2646528B7635B1D /* Products */,
 				80359AAC70C0B81B7ED27672E31D567B /* Targets Support Files */,
@@ -295,36 +302,63 @@
 		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				578452D2E740E91742655AC8F1636D1F /* iOS */,
+				E4801F62A6B08CD9B5410329F1A18FDE /* iOS */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DA2C4D59E663A3F082B4D12D84705EB8 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				259D3D733117C9A0021A0F590387DF35 /* LimeLinkRequest.swift */,
+			);
+			name = Request;
+			path = Request;
+			sourceTree = "<group>";
+		};
+		E4801F62A6B08CD9B5410329F1A18FDE /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				384DDA2CB25005BD6479B5987C619DD4 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		F52F3C58340B45BBFFAC118D6A565655 /* Handlers */ = {
+			isa = PBXGroup;
+			children = (
+				AF83A4E583AB46E0566E4CC33FCFDB9D /* UniversalLink.swift */,
+				05707E6C74B1649A0E436F695754FD16 /* UrlHandler.swift */,
+			);
+			name = Handlers;
+			path = LimelinkIOSSDK/Classes/Handlers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		541A0ABC1D0C05A6C8DB6CA45CF8D2CA /* Headers */ = {
+		8F71D9A424BCE71DEED4D6E6C8F22C03 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				527E67632E487D1E003D447D /* UniversalLinkHandlerBridge.h in Headers */,
-				EABAEBB379AB525823C3A96642E42DD1 /* LimelinkIOSSDK-umbrella.h in Headers */,
+				64F9C9F41D1359F492A09A62FE0322D7 /* Pods-LimelinkIOSSDK_Example-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C0089220A1D6A34D52B31BBBE99CACA1 /* Headers */ = {
+		8FBE21EBFDBDBD3C9B64387FDB95537D /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ACD367E25C8105667FD7520F8268A2B2 /* Pods-LimelinkIOSSDK_Tests-umbrella.h in Headers */,
+				89B665158FC067EB01C079E5EDD0C9C9 /* Pods-LimelinkIOSSDK_Tests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EAA054B8A89FF3EA37B2F851AD690909 /* Headers */ = {
+		A42C7E3D33B3B8FD3C547E0F585A8334 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8C3A0F580DC9D4B3434340E89FC7C4F7 /* Pods-LimelinkIOSSDK_Example-umbrella.h in Headers */,
+				7718929F9B7CA55E50CD308D37CBDDA3 /* LimelinkIOSSDK-umbrella.h in Headers */,
+				15FF567263F1DA264ADF73506A332630 /* UniversalLinkHandlerBridge.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,12 +367,12 @@
 /* Begin PBXNativeTarget section */
 		5598DA2834748B88E9A691658BC79257 /* LimelinkIOSSDK */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5DAA54AF94C068C48F2A141B41606F9A /* Build configuration list for PBXNativeTarget "LimelinkIOSSDK" */;
+			buildConfigurationList = 54430AFDC154C8D0638926063657CD3C /* Build configuration list for PBXNativeTarget "LimelinkIOSSDK" */;
 			buildPhases = (
-				541A0ABC1D0C05A6C8DB6CA45CF8D2CA /* Headers */,
-				2AB1BA2F2387D5C55CC8F0B4F32CF251 /* Sources */,
-				6EC6D6C20FC592AC58D15F8FC96F8B72 /* Frameworks */,
-				3C4372D5078874C376A0B49EBAE1806B /* Resources */,
+				A42C7E3D33B3B8FD3C547E0F585A8334 /* Headers */,
+				5B177097878C0EA592506BDA734A3D3E /* Sources */,
+				73A3B763258B31B909630CA13BAC456F /* Frameworks */,
+				F8A636E1BB1A94DAF6039A7CA49DFA5E /* Resources */,
 			);
 			buildRules = (
 			);
@@ -346,45 +380,45 @@
 			);
 			name = LimelinkIOSSDK;
 			productName = LimelinkIOSSDK;
-			productReference = EDA8B88FF6E0A80A8048F508F28918AF /* LimelinkIOSSDK.framework */;
+			productReference = EDA8B88FF6E0A80A8048F508F28918AF /* LimelinkIOSSDK */;
 			productType = "com.apple.product-type.framework";
 		};
 		651829D2ECE77BFB8078E4171A96153E /* Pods-LimelinkIOSSDK_Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9DF9B1647578460D10F002476C3FD686 /* Build configuration list for PBXNativeTarget "Pods-LimelinkIOSSDK_Tests" */;
+			buildConfigurationList = 8EE87F79AA72412F37149D0DD5D51CF9 /* Build configuration list for PBXNativeTarget "Pods-LimelinkIOSSDK_Tests" */;
 			buildPhases = (
-				C0089220A1D6A34D52B31BBBE99CACA1 /* Headers */,
-				4B0307D7E0A4F01A6596B8D1333826CB /* Sources */,
-				6A2A36A0C5A14494CC8BACA145A51EE0 /* Frameworks */,
-				FC6F539EA86A503F11CB4DA527A63E09 /* Resources */,
+				8FBE21EBFDBDBD3C9B64387FDB95537D /* Headers */,
+				3CBCA62F4702DAE4204CC6ADE1B596CB /* Sources */,
+				C418362A90C98FD7FF4C5B55B866170E /* Frameworks */,
+				4DCDF7221F49CCC2B563FB8BBD7E6403 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				9DF7E0781BFA723AA14E38A30D6032FF /* PBXTargetDependency */,
+				6397C97C7A97C8020237C358677CE9D1 /* PBXTargetDependency */,
 			);
 			name = "Pods-LimelinkIOSSDK_Tests";
 			productName = Pods_LimelinkIOSSDK_Tests;
-			productReference = 618DECF6CEFC162B9EA35CF81689A19B /* Pods_LimelinkIOSSDK_Tests.framework */;
+			productReference = 618DECF6CEFC162B9EA35CF81689A19B /* Pods-LimelinkIOSSDK_Tests */;
 			productType = "com.apple.product-type.framework";
 		};
 		C2356E82ABC39712E80CA7CD765B4290 /* Pods-LimelinkIOSSDK_Example */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9819EC4ECC56A8D1229DDFBF074FF9DD /* Build configuration list for PBXNativeTarget "Pods-LimelinkIOSSDK_Example" */;
+			buildConfigurationList = 66BD060B2474111D15532619E7C3F673 /* Build configuration list for PBXNativeTarget "Pods-LimelinkIOSSDK_Example" */;
 			buildPhases = (
-				EAA054B8A89FF3EA37B2F851AD690909 /* Headers */,
-				B7B9C537205467F1DB70E670782BBAB2 /* Sources */,
-				ACAB7C8411BCB81D9F20718E8C78909D /* Frameworks */,
-				262BD24A8FA5939F6E51F6B553F7BC51 /* Resources */,
+				8F71D9A424BCE71DEED4D6E6C8F22C03 /* Headers */,
+				0AC4EC8C759D01058E4C5AFD04C64028 /* Sources */,
+				2CFC43ADAE49393DCBB3E40C336CECD1 /* Frameworks */,
+				D655CEAB575994B976C5135882BBE8BA /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				9EA69785BF35B53FA7CE6A918927E7EA /* PBXTargetDependency */,
+				035C0A11273B4F281997B5F9514EE1C2 /* PBXTargetDependency */,
 			);
 			name = "Pods-LimelinkIOSSDK_Example";
 			productName = Pods_LimelinkIOSSDK_Example;
-			productReference = DF6E689842ED76EEF288F64EC1ED2E52 /* Pods_LimelinkIOSSDK_Example.framework */;
+			productReference = DF6E689842ED76EEF288F64EC1ED2E52 /* Pods-LimelinkIOSSDK_Example */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -393,12 +427,11 @@
 		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				BuildIndependentTargetsInParallel = YES;
-				LastSwiftUpdateCheck = 1500;
-				LastUpgradeCheck = 1530;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 12.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -406,6 +439,8 @@
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			minimizedProjectReferenceProxies = 0;
+			preferredProjectObjectVersion = 77;
 			productRefGroup = 6DFCD24F46035CE3C2646528B7635B1D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -418,21 +453,21 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		262BD24A8FA5939F6E51F6B553F7BC51 /* Resources */ = {
+		4DCDF7221F49CCC2B563FB8BBD7E6403 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3C4372D5078874C376A0B49EBAE1806B /* Resources */ = {
+		D655CEAB575994B976C5135882BBE8BA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FC6F539EA86A503F11CB4DA527A63E09 /* Resources */ = {
+		F8A636E1BB1A94DAF6039A7CA49DFA5E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -442,70 +477,120 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		2AB1BA2F2387D5C55CC8F0B4F32CF251 /* Sources */ = {
+		0AC4EC8C759D01058E4C5AFD04C64028 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				14A8AE0C4B79C68CB681F66D0CCCB6C2 /* LimelinkIOSSDK-dummy.m in Sources */,
-				527E67642E487D1E003D447D /* UniversalLink.swift in Sources */,
-				527E67652E487D1E003D447D /* LimelinkService.swift in Sources */,
-				527E67662E487D1E003D447D /* UrlHandler.swift in Sources */,
-				527E67672E487D1E003D447D /* EventType.swift in Sources */,
-				527E67682E487D1E003D447D /* PathParamResponse.swift in Sources */,
-				527E67692E487D1E003D447D /* UniversalLinkHandlerBridge.m in Sources */,
-				527E676A2E487D1E003D447D /* LimeLinkRequest.swift in Sources */,
+				79BD1C9589AD133D03ABB7947D4D99AF /* Pods-LimelinkIOSSDK_Example-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4B0307D7E0A4F01A6596B8D1333826CB /* Sources */ = {
+		3CBCA62F4702DAE4204CC6ADE1B596CB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				97FE0CC810E2E08E0ADF5BA1AC65467B /* Pods-LimelinkIOSSDK_Tests-dummy.m in Sources */,
+				FA81AFE673BF81C768AE34E4964D27B8 /* Pods-LimelinkIOSSDK_Tests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B7B9C537205467F1DB70E670782BBAB2 /* Sources */ = {
+		5B177097878C0EA592506BDA734A3D3E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3D9A973B262F7D8C8D2D65658D6F440C /* Pods-LimelinkIOSSDK_Example-dummy.m in Sources */,
+				E4FF7963FA5762748EBACBB6C028FB20 /* DeferredDeepLinkService.swift in Sources */,
+				A7D60DBB819414E30B78A85211693E10 /* EventType.swift in Sources */,
+				9E9A46FE1EAE3145B549C4DFFC7CB05F /* LimeLinkConfig.swift in Sources */,
+				203B0AEFCF36D73348452D3493D1768D /* LimeLinkError.swift in Sources */,
+				F9960A1A514E9B2D4A5A9A77EA0DF27F /* LimelinkIOSSDK-dummy.m in Sources */,
+				D2ABBABD07155DA5805B60DB2CA38D48 /* LimeLinkListener.swift in Sources */,
+				32639A35BDD573EF078430F7326F244E /* LimeLinkRequest.swift in Sources */,
+				D67A3343BB4FFDD5A07AEE7019115BC1 /* LimeLinkResult.swift in Sources */,
+				7A0658204FBFAE4CF764483C98C058C4 /* LimeLinkSDK.swift in Sources */,
+				DB765207FDB84E8F9BEABFB75608E874 /* LimelinkService.swift in Sources */,
+				5452F228DF020F458B505008BD77C171 /* PathParamResponse.swift in Sources */,
+				9FAB123E22755CAD27BAADDBF58E951D /* UniversalLink.swift in Sources */,
+				FCF0C3D7705528B538C72E70CB554EE9 /* UniversalLinkHandlerBridge.m in Sources */,
+				C97E57AB89842E29632AE62F4AFD309D /* UrlHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		9DF7E0781BFA723AA14E38A30D6032FF /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Pods-LimelinkIOSSDK_Example";
-			target = C2356E82ABC39712E80CA7CD765B4290 /* Pods-LimelinkIOSSDK_Example */;
-			targetProxy = 914710428DE52D5843546DD4769ABEA0 /* PBXContainerItemProxy */;
-		};
-		9EA69785BF35B53FA7CE6A918927E7EA /* PBXTargetDependency */ = {
+		035C0A11273B4F281997B5F9514EE1C2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = LimelinkIOSSDK;
 			target = 5598DA2834748B88E9A691658BC79257 /* LimelinkIOSSDK */;
-			targetProxy = 745090511BD84017F61D16E8424FE1C9 /* PBXContainerItemProxy */;
+			targetProxy = 5A596EAAED98628DF2854C714800F964 /* PBXContainerItemProxy */;
+		};
+		6397C97C7A97C8020237C358677CE9D1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-LimelinkIOSSDK_Example";
+			target = C2356E82ABC39712E80CA7CD765B4290 /* Pods-LimelinkIOSSDK_Example */;
+			targetProxy = 8653625D6E891DC58E66C654C97C655D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		198F31D2831EC74E1082FB69D1BE6FED /* Debug */ = {
+		0EAE265E4927D03649683343D9D5E790 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D9CE87BDA95AA740E6107C4B0267C509 /* Pods-LimelinkIOSSDK_Tests.debug.xcconfig */;
+			baseConfigurationReference = 0135522BB329032C1CC9E33ED8936B76 /* Pods-LimelinkIOSSDK_Example.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_MODULE_VERIFIER = YES;
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				INFOPLIST_FILE = "Target Support Files/Pods-LimelinkIOSSDK_Example/Pods-LimelinkIOSSDK_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-LimelinkIOSSDK_Example/Pods-LimelinkIOSSDK_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		205C0EE4D769000566E4BEDB3290D9F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D9CE87BDA95AA740E6107C4B0267C509 /* Pods-LimelinkIOSSDK_Tests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				INFOPLIST_FILE = "Target Support Files/Pods-LimelinkIOSSDK_Tests/Pods-LimelinkIOSSDK_Tests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -513,7 +598,6 @@
 				);
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-LimelinkIOSSDK_Tests/Pods-LimelinkIOSSDK_Tests.modulemap";
-				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++14";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -562,11 +646,9 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -579,10 +661,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
@@ -590,55 +673,22 @@
 			};
 			name = Release;
 		};
-		8823D7357A6EBE1E083E31B7AD41237C /* Debug */ = {
+		A5F10138ABED9819C2E0001BD8854223 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5AB3B4832EEA0F338E0684FCB359DBF4 /* Pods-LimelinkIOSSDK_Example.debug.xcconfig */;
+			baseConfigurationReference = F276F1A58167372FB05E2AF92DCBD5B4 /* LimelinkIOSSDK.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_MODULE_VERIFIER = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-LimelinkIOSSDK_Example/Pods-LimelinkIOSSDK_Example-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-LimelinkIOSSDK_Example/Pods-LimelinkIOSSDK_Example.modulemap";
-				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++14";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		96BC5AEDA9536315A886E470310502BF /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7F0832B027A9C5523BCBD5328528D500 /* LimelinkIOSSDK.debug.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_MODULE_VERIFIER = YES;
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_PREFIX_HEADER = "Target Support Files/LimelinkIOSSDK/LimelinkIOSSDK-prefix.pch";
+				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = "Target Support Files/LimelinkIOSSDK/LimelinkIOSSDK-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
@@ -648,7 +698,6 @@
 					"@loader_path/Frameworks",
 				);
 				MODULEMAP_FILE = "Target Support Files/LimelinkIOSSDK/LimelinkIOSSDK.modulemap";
-				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++14";
 				PRODUCT_MODULE_NAME = LimelinkIOSSDK;
 				PRODUCT_NAME = LimelinkIOSSDK;
 				SDKROOT = iphoneos;
@@ -661,19 +710,23 @@
 			};
 			name = Debug;
 		};
-		9B4DA0AE8D81E027510BE025FA3F8E29 /* Release */ = {
+		B33AD31335EEA3AE49F5DF82CF9564C2 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 21C0900E16657641C26B948A9A7E124C /* Pods-LimelinkIOSSDK_Tests.release.xcconfig */;
+			baseConfigurationReference = 52A258BC4F881A2BCDD4C6D5F1C2E675 /* LimelinkIOSSDK.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_MODULE_VERIFIER = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-LimelinkIOSSDK_Tests/Pods-LimelinkIOSSDK_Tests-Info.plist";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_PREFIX_HEADER = "Target Support Files/LimelinkIOSSDK/LimelinkIOSSDK-prefix.pch";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "Target Support Files/LimelinkIOSSDK/LimelinkIOSSDK-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -681,9 +734,46 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MODULEMAP_FILE = "Target Support Files/LimelinkIOSSDK/LimelinkIOSSDK.modulemap";
+				PRODUCT_MODULE_NAME = LimelinkIOSSDK;
+				PRODUCT_NAME = LimelinkIOSSDK;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B9B7496ADD941C90E5950D0440B5B106 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5AB3B4832EEA0F338E0684FCB359DBF4 /* Pods-LimelinkIOSSDK_Example.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				INFOPLIST_FILE = "Target Support Files/Pods-LimelinkIOSSDK_Example/Pods-LimelinkIOSSDK_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-LimelinkIOSSDK_Tests/Pods-LimelinkIOSSDK_Tests.modulemap";
-				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++14";
+				MODULEMAP_FILE = "Target Support Files/Pods-LimelinkIOSSDK_Example/Pods-LimelinkIOSSDK_Example.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -692,11 +782,10 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
 		D299434AB35E7FD6F7921C8EF24742FF /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -733,11 +822,9 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -753,11 +840,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -765,65 +853,32 @@
 			};
 			name = Debug;
 		};
-		F14CADC6A57E474DD21866AAB7BD606D /* Release */ = {
+		FB6298AEC0B092D0A1908517F01D333A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B5B7439C5367FF26CB84145807907C08 /* LimelinkIOSSDK.release.xcconfig */;
+			baseConfigurationReference = 21C0900E16657641C26B948A9A7E124C /* Pods-LimelinkIOSSDK_Tests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_MODULE_VERIFIER = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/LimelinkIOSSDK/LimelinkIOSSDK-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/LimelinkIOSSDK/LimelinkIOSSDK-Info.plist";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				INFOPLIST_FILE = "Target Support Files/Pods-LimelinkIOSSDK_Tests/Pods-LimelinkIOSSDK_Tests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/LimelinkIOSSDK/LimelinkIOSSDK.modulemap";
-				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++14";
-				PRODUCT_MODULE_NAME = LimelinkIOSSDK;
-				PRODUCT_NAME = LimelinkIOSSDK;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		FC29668AC6EA0289C393C27422D83C86 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0135522BB329032C1CC9E33ED8936B76 /* Pods-LimelinkIOSSDK_Example.release.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_MODULE_VERIFIER = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-LimelinkIOSSDK_Example/Pods-LimelinkIOSSDK_Example-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
 				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-LimelinkIOSSDK_Example/Pods-LimelinkIOSSDK_Example.modulemap";
-				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++14";
+				MODULEMAP_FILE = "Target Support Files/Pods-LimelinkIOSSDK_Tests/Pods-LimelinkIOSSDK_Tests.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -850,29 +905,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5DAA54AF94C068C48F2A141B41606F9A /* Build configuration list for PBXNativeTarget "LimelinkIOSSDK" */ = {
+		54430AFDC154C8D0638926063657CD3C /* Build configuration list for PBXNativeTarget "LimelinkIOSSDK" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				96BC5AEDA9536315A886E470310502BF /* Debug */,
-				F14CADC6A57E474DD21866AAB7BD606D /* Release */,
+				A5F10138ABED9819C2E0001BD8854223 /* Debug */,
+				B33AD31335EEA3AE49F5DF82CF9564C2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9819EC4ECC56A8D1229DDFBF074FF9DD /* Build configuration list for PBXNativeTarget "Pods-LimelinkIOSSDK_Example" */ = {
+		66BD060B2474111D15532619E7C3F673 /* Build configuration list for PBXNativeTarget "Pods-LimelinkIOSSDK_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8823D7357A6EBE1E083E31B7AD41237C /* Debug */,
-				FC29668AC6EA0289C393C27422D83C86 /* Release */,
+				B9B7496ADD941C90E5950D0440B5B106 /* Debug */,
+				0EAE265E4927D03649683343D9D5E790 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9DF9B1647578460D10F002476C3FD686 /* Build configuration list for PBXNativeTarget "Pods-LimelinkIOSSDK_Tests" */ = {
+		8EE87F79AA72412F37149D0DD5D51CF9 /* Build configuration list for PBXNativeTarget "Pods-LimelinkIOSSDK_Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				198F31D2831EC74E1082FB69D1BE6FED /* Debug */,
-				9B4DA0AE8D81E027510BE025FA3F8E29 /* Release */,
+				205C0EE4D769000566E4BEDB3290D9F8 /* Debug */,
+				FB6298AEC0B092D0A1908517F01D333A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

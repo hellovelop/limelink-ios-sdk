@@ -15,6 +15,25 @@
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		6141C31CC0CC21E953A39D49 /* Pods_LimelinkIOSSDK_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CADB810869405321432EAF40 /* Pods_LimelinkIOSSDK_Example.framework */; };
 		C09A9339241E54C590198104 /* Pods_LimelinkIOSSDK_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9E8FAAD1824217064702AC1 /* Pods_LimelinkIOSSDK_Tests.framework */; };
+		5F6B2FBFFB81CFAB48037257 /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5A724ED5A5BEED66835592 /* MockURLProtocol.swift */; };
+		B6C9E0341CEFA892CF31CCEC /* MockLimeLinkListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E98E52655CD40122A56854C /* MockLimeLinkListener.swift */; };
+		4CEAEF6ABB15C468DD9CAFE5 /* TestConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1375D2FF05C221E2BA67B81A /* TestConstants.swift */; };
+		44E0828713FFD637ED24922D /* XCTestCase+LimeLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273482082F467D46701C8EA5 /* XCTestCase+LimeLink.swift */; };
+		412BFF8965F927D04D069D8C /* LimeLinkConfigTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C053991267BA453A33D730E /* LimeLinkConfigTests.swift */; };
+		805D948936CB4CBC1302CEBC /* UrlHandlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D06B8C92D67C5F469AB756D /* UrlHandlerTests.swift */; };
+		73BB194690A20E89EA18E68E /* PathParamResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19542E0ED041F4987FB426D /* PathParamResponseTests.swift */; };
+		86CE19B00DD1E92D327146C5 /* LimeLinkRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E5D1D4D7DB8E613B0F3913 /* LimeLinkRequestTests.swift */; };
+		60A3D489BD9F2C421A41A788 /* EventTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE069B4965F1ED153861363D /* EventTypeTests.swift */; };
+		C5F7AD06B65909A6F7A7A9BF /* LimeLinkErrorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987090F124EF35EC7046FBF2 /* LimeLinkErrorTests.swift */; };
+		EA0B184AE40AE0EDB361C473 /* LimeLinkResultTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC649BD00F53512C18DA2F7D /* LimeLinkResultTests.swift */; };
+		0B1AD5F7ABE4575E7391F880 /* LinkStatsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB68BBEB6386187B4040BDB7 /* LinkStatsTests.swift */; };
+		4381519A158D9D8279B0F55F /* UniversalLinkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A69803850EADCD36DE50F4 /* UniversalLinkTests.swift */; };
+		2AF415A58E13372AC862789E /* DeferredDeepLinkServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D73707BF5F6F7B27C035751 /* DeferredDeepLinkServiceTests.swift */; };
+		59B1C61CD4FD317E70119E4F /* LimelinkServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784F7F10B66216A14DC6BBF8 /* LimelinkServiceTests.swift */; };
+		A598AC8AE9D6000871F36EBB /* LimeLinkSDKTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BD6CD7DD84A57ABAACB518 /* LimeLinkSDKTests.swift */; };
+		D6447E815934E339CE013F35 /* UniversalLinkFlowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9646D701120DFAD56D1877F /* UniversalLinkFlowTests.swift */; };
+		9C9D907A4476AF17F5433D01 /* DeferredDeepLinkFlowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13AD034206FE77DC3914683 /* DeferredDeepLinkFlowTests.swift */; };
+		37BC65F543CE9B733B62F7D7 /* ObjCBridgeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF910497EA10D994E43147A1 /* ObjCBridgeTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +66,25 @@
 		CADB810869405321432EAF40 /* Pods_LimelinkIOSSDK_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LimelinkIOSSDK_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5D057E39AB3F4EFACFDEA5A /* Pods-LimelinkIOSSDK_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LimelinkIOSSDK_Example.release.xcconfig"; path = "Target Support Files/Pods-LimelinkIOSSDK_Example/Pods-LimelinkIOSSDK_Example.release.xcconfig"; sourceTree = "<group>"; };
 		E9E8FAAD1824217064702AC1 /* Pods_LimelinkIOSSDK_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LimelinkIOSSDK_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C5A724ED5A5BEED66835592 /* MockURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
+		8E98E52655CD40122A56854C /* MockLimeLinkListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLimeLinkListener.swift; sourceTree = "<group>"; };
+		1375D2FF05C221E2BA67B81A /* TestConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestConstants.swift; sourceTree = "<group>"; };
+		273482082F467D46701C8EA5 /* XCTestCase+LimeLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+LimeLink.swift"; sourceTree = "<group>"; };
+		8C053991267BA453A33D730E /* LimeLinkConfigTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LimeLinkConfigTests.swift; sourceTree = "<group>"; };
+		3D06B8C92D67C5F469AB756D /* UrlHandlerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlHandlerTests.swift; sourceTree = "<group>"; };
+		C19542E0ED041F4987FB426D /* PathParamResponseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathParamResponseTests.swift; sourceTree = "<group>"; };
+		78E5D1D4D7DB8E613B0F3913 /* LimeLinkRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LimeLinkRequestTests.swift; sourceTree = "<group>"; };
+		DE069B4965F1ED153861363D /* EventTypeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTypeTests.swift; sourceTree = "<group>"; };
+		987090F124EF35EC7046FBF2 /* LimeLinkErrorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LimeLinkErrorTests.swift; sourceTree = "<group>"; };
+		DC649BD00F53512C18DA2F7D /* LimeLinkResultTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LimeLinkResultTests.swift; sourceTree = "<group>"; };
+		BB68BBEB6386187B4040BDB7 /* LinkStatsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkStatsTests.swift; sourceTree = "<group>"; };
+		38A69803850EADCD36DE50F4 /* UniversalLinkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversalLinkTests.swift; sourceTree = "<group>"; };
+		1D73707BF5F6F7B27C035751 /* DeferredDeepLinkServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeferredDeepLinkServiceTests.swift; sourceTree = "<group>"; };
+		784F7F10B66216A14DC6BBF8 /* LimelinkServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LimelinkServiceTests.swift; sourceTree = "<group>"; };
+		C5BD6CD7DD84A57ABAACB518 /* LimeLinkSDKTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LimeLinkSDKTests.swift; sourceTree = "<group>"; };
+		A9646D701120DFAD56D1877F /* UniversalLinkFlowTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversalLinkFlowTests.swift; sourceTree = "<group>"; };
+		B13AD034206FE77DC3914683 /* DeferredDeepLinkFlowTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeferredDeepLinkFlowTests.swift; sourceTree = "<group>"; };
+		AF910497EA10D994E43147A1 /* ObjCBridgeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjCBridgeTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +173,9 @@
 		607FACE81AFB9204008FA782 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				93EBF002CC65C7EFF1EA3702 /* Helpers */,
+				296C30DE55C3829BE9E7B4DE /* Unit */,
+				30071E2AD40ACF9BB3A56969 /* Integration */,
 				607FACEB1AFB9204008FA782 /* Tests.swift */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
 			);
@@ -157,6 +198,46 @@
 				B197B4E0380D70B23AC1EE69 /* LICENSE */,
 			);
 			name = "Podspec Metadata";
+			sourceTree = "<group>";
+		};
+		93EBF002CC65C7EFF1EA3702 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				3C5A724ED5A5BEED66835592 /* MockURLProtocol.swift */,
+				8E98E52655CD40122A56854C /* MockLimeLinkListener.swift */,
+				1375D2FF05C221E2BA67B81A /* TestConstants.swift */,
+				273482082F467D46701C8EA5 /* XCTestCase+LimeLink.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		296C30DE55C3829BE9E7B4DE /* Unit */ = {
+			isa = PBXGroup;
+			children = (
+				8C053991267BA453A33D730E /* LimeLinkConfigTests.swift */,
+				3D06B8C92D67C5F469AB756D /* UrlHandlerTests.swift */,
+				C19542E0ED041F4987FB426D /* PathParamResponseTests.swift */,
+				78E5D1D4D7DB8E613B0F3913 /* LimeLinkRequestTests.swift */,
+				DE069B4965F1ED153861363D /* EventTypeTests.swift */,
+				987090F124EF35EC7046FBF2 /* LimeLinkErrorTests.swift */,
+				DC649BD00F53512C18DA2F7D /* LimeLinkResultTests.swift */,
+				BB68BBEB6386187B4040BDB7 /* LinkStatsTests.swift */,
+				38A69803850EADCD36DE50F4 /* UniversalLinkTests.swift */,
+				1D73707BF5F6F7B27C035751 /* DeferredDeepLinkServiceTests.swift */,
+				784F7F10B66216A14DC6BBF8 /* LimelinkServiceTests.swift */,
+				C5BD6CD7DD84A57ABAACB518 /* LimeLinkSDKTests.swift */,
+			);
+			path = Unit;
+			sourceTree = "<group>";
+		};
+		30071E2AD40ACF9BB3A56969 /* Integration */ = {
+			isa = PBXGroup;
+			children = (
+				A9646D701120DFAD56D1877F /* UniversalLinkFlowTests.swift */,
+				B13AD034206FE77DC3914683 /* DeferredDeepLinkFlowTests.swift */,
+				AF910497EA10D994E43147A1 /* ObjCBridgeTests.swift */,
+			);
+			path = Integration;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -340,6 +421,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F6B2FBFFB81CFAB48037257 /* MockURLProtocol.swift in Sources */,
+				B6C9E0341CEFA892CF31CCEC /* MockLimeLinkListener.swift in Sources */,
+				4CEAEF6ABB15C468DD9CAFE5 /* TestConstants.swift in Sources */,
+				44E0828713FFD637ED24922D /* XCTestCase+LimeLink.swift in Sources */,
+				412BFF8965F927D04D069D8C /* LimeLinkConfigTests.swift in Sources */,
+				805D948936CB4CBC1302CEBC /* UrlHandlerTests.swift in Sources */,
+				73BB194690A20E89EA18E68E /* PathParamResponseTests.swift in Sources */,
+				86CE19B00DD1E92D327146C5 /* LimeLinkRequestTests.swift in Sources */,
+				60A3D489BD9F2C421A41A788 /* EventTypeTests.swift in Sources */,
+				C5F7AD06B65909A6F7A7A9BF /* LimeLinkErrorTests.swift in Sources */,
+				EA0B184AE40AE0EDB361C473 /* LimeLinkResultTests.swift in Sources */,
+				0B1AD5F7ABE4575E7391F880 /* LinkStatsTests.swift in Sources */,
+				4381519A158D9D8279B0F55F /* UniversalLinkTests.swift in Sources */,
+				2AF415A58E13372AC862789E /* DeferredDeepLinkServiceTests.swift in Sources */,
+				59B1C61CD4FD317E70119E4F /* LimelinkServiceTests.swift in Sources */,
+				A598AC8AE9D6000871F36EBB /* LimeLinkSDKTests.swift in Sources */,
+				D6447E815934E339CE013F35 /* UniversalLinkFlowTests.swift in Sources */,
+				9C9D907A4476AF17F5433D01 /* DeferredDeepLinkFlowTests.swift in Sources */,
+				37BC65F543CE9B733B62F7D7 /* ObjCBridgeTests.swift in Sources */,
 				607FACEC1AFB9204008FA782 /* Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -545,7 +645,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LimelinkIOSSDK_Example.app/LimelinkIOSSDK_Example";
 			};
 			name = Debug;
@@ -567,7 +667,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LimelinkIOSSDK_Example.app/LimelinkIOSSDK_Example";
 			};
 			name = Release;
