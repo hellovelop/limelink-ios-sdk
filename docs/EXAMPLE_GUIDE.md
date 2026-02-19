@@ -62,8 +62,8 @@ Example/
 │   │   ├── MockLimeLinkListener.swift
 │   │   ├── TestConstants.swift
 │   │   └── XCTestCase+LimeLink.swift
-│   ├── Unit/                      # 단위 테스트 (93개)
-│   └── Integration/               # 통합 테스트 (14개)
+│   ├── Unit/                      # 단위 테스트 (99개)
+│   └── Integration/               # 통합 테스트 (15개)
 └── Podfile
 ```
 
@@ -255,13 +255,13 @@ xcodebuild test \
   | xcpretty
 ```
 
-### 테스트 구성 (108개)
+### 테스트 구성 (115개)
 
 | 카테고리 | 테스트 수 | 대상 |
 |---------|---------|------|
 | 모델 Unit | 35 | Config, Error, Result, EventType, PathParam, Request, UrlHandler |
-| 서비스 Unit | 58 | LinkStats, UniversalLink, DeferredDeepLink, LimelinkService, SDK |
-| Integration | 14 | E2E 흐름, ObjC Bridge, 다중 Listener |
+| 서비스 Unit | 64 | LinkStats, UniversalLink, DeferredDeepLink, LimelinkService, SDK |
+| Integration | 15 | E2E 흐름, ObjC Bridge, 다중 Listener |
 | 스모크 | 1 | 기본 동작 확인 |
 
 ## 디버깅 팁

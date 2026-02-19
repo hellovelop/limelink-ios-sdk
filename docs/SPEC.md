@@ -1,7 +1,7 @@
 # LimeLink iOS SDK - Technical Specification
 
 **Version**: 0.2.0
-**Last Updated**: 2026-02-12
+**Last Updated**: 2026-02-19
 
 ## 목차
 
@@ -52,7 +52,7 @@ LimeLink iOS SDK는 iOS 앱에 딥링크, Universal Link, Deferred Deep Link, �
 | iOS Deployment Target | 12.0+ |
 | Swift | 5.0 |
 | Xcode | 14.0+ |
-| 패키지 매니저 | CocoaPods |
+| 패키지 매니저 | CocoaPods, Swift Package Manager |
 | 라이선스 | MIT |
 
 ---
@@ -184,7 +184,8 @@ SDK의 메인 진입점입니다. 싱글톤 패턴으로 `LimeLinkSDK.shared`로
 )
 ```
 
-- `DeferredDeepLinkService.getDeferredDeepLink()`를 내부적으로 호출합니다.
+- `DeferredDeepLinkService.getDeferredDeepLinkWithDetail()`를 내부적으로 호출합니다.
+- 응답에서 `originalUrl`(full_request_url)과 `queryParams`를 파싱하여 `LimeLinkResult`에 포함합니다.
 - 결과는 completion handler와 등록된 리스너 모두에 전달됩니다.
 - `result.isDeferred`는 항상 `true`입니다.
 
@@ -254,11 +255,18 @@ public class DeferredDeepLinkService {
         baseUrl: String? = nil,
         completion: @escaping (Result<String, Error>) -> Void
     )
+
+    // Internal: URI와 originalUrl을 함께 반환
+    static func getDeferredDeepLinkWithDetail(
+        baseUrl: String? = nil,
+        completion: @escaping (Result<(uri: String, originalUrl: String?), Error>) -> Void
+    )
 }
 ```
 
 - `baseUrl`이 `nil`이면 `"https://limelink.org/"`을 사용합니다.
-- 성공 시 `.success(uri)`, 실패 시 `.failure(error)`를 전달합니다.
+- `getDeferredDeepLink`: 성공 시 `.success(uri)`, 실패 시 `.failure(error)`를 전달합니다.
+- `getDeferredDeepLinkWithDetail`: 성공 시 `uri`와 `originalUrl`(full_request_url)을 함께 반환합니다. `LimeLinkSDK.handleDeferredDeepLink`에서 내부적으로 사용합니다.
 
 ### 4.6 LinkStats
 
@@ -605,7 +613,7 @@ handleDeferredDeepLink(completion:)
   │
   ├─ 미초기화 → completion?(nil, error), notifyError, 리턴
   │
-  └─ DeferredDeepLinkService.getDeferredDeepLink(baseUrl:) { result in
+  └─ DeferredDeepLinkService.getDeferredDeepLinkWithDetail(baseUrl:) { result in
        │
        ├─ 1단계: 디바이스 정보 수집
        │    ├─ UIScreen.main.bounds → width, height
@@ -613,17 +621,20 @@ handleDeferredDeepLink(completion:)
        │
        ├─ 2단계: Suffix 조회
        │    └─ GET /api/v1/deferred-deep-link?width=&height=&user_agent=
-       │         ├─ 200 + suffix 존재 → 3단계로
+       │         ├─ 200 + suffix 존재 → 3단계로 (full_request_url 보존)
        │         └─ 에러 또는 suffix null → .failure
        │
        ├─ 3단계: Dynamic Link 조회
        │    └─ GET /api/v1/app/dynamic_link/{suffix}
        │         ?full_request_url=...&event_type=setup
-       │         ├─ 200 → .success(uri)
+       │         ├─ 200 → .success(uri, originalUrl)
        │         └─ 에러 → .failure
        │
-       ├─ .success(uri)
-       │    ├─ LimeLinkResult 생성 (isDeferred: true)
+       ├─ .success(uri, originalUrl)
+       │    ├─ originalUrl에서 queryParams 파싱 (URLComponents)
+       │    ├─ LimeLinkResult 생성 (isDeferred: true,
+       │    │    originalUrl: full_request_url,
+       │    │    queryParams: 파싱된 쿼리 파라미터)
        │    ├─ notifyResult(result) → 리스너 콜백
        │    └─ completion?(result, nil)
        │
@@ -771,15 +782,15 @@ trackLinkStatus(url:)
 
 - 프레임워크: XCTest (외부 의존성 없음)
 - 네트워크 모킹: `URLProtocol` 서브클래스 (`MockURLProtocol`)
-- 총 테스트: **108개** (107 계획 + 1 스모크)
+- 총 테스트: **115개** (107 계획 + 1 스모크 + 7 디테일 정보)
 
 ### 테스트 분류
 
 | 카테고리 | 파일 수 | 테스트 수 | 대상 |
 |---------|--------|---------|------|
 | 모델 Unit | 7 | 35 | Config, UrlHandler, PathParam, Request, EventType, Error, Result |
-| 서비스 Unit | 5 | 58 | LinkStats, UniversalLink, DeferredDeepLink, LimelinkService, SDK |
-| Integration | 3 | 14 | E2E 흐름, ObjC Bridge, 다중 Listener |
+| 서비스 Unit | 5 | 64 | LinkStats, UniversalLink, DeferredDeepLink, LimelinkService, SDK |
+| Integration | 3 | 15 | E2E 흐름, ObjC Bridge, 다중 Listener |
 | 스모크 | 1 | 1 | 기본 동작 확인 |
 
 ### 테스트 인프라
@@ -833,7 +844,7 @@ trackLinkStatus(url:)
 
 | 항목 | 설명 |
 |------|------|
-| 패키지 매니저 | CocoaPods만 지원. SPM 미지원. |
+| 패키지 매니저 | CocoaPods, Swift Package Manager 지원. |
 | 동시성 | `URLSession.shared` 전역 인스턴스 사용. 커스텀 URLSession 주입 불가. |
 | 오프라인 | 오프라인 캐싱 미지원. 네트워크 연결 필수. |
 | 재시도 | API 요청 실패 시 자동 재시도 없음. |
@@ -862,7 +873,10 @@ trackLinkStatus(url:)
 - ObjC Bridge SDK 경유 라우팅
 - `LinkStats.isFirstLaunch()` 버그 수정 (`object(forKey:) == nil` 사용)
 - 레거시 URL 쿼리 수정 (`/` → `?`)
-- 테스트 스위트 108개 추가
+- 테스트 스위트 115개 추가
+- Swift Package Manager 지원 추가 (2개 타겟: Swift + ObjC Bridge)
+- Deferred Deep Link에서 `originalUrl`, `queryParams` 상세 정보 반환
+- `getDeferredDeepLinkWithDetail()` 내부 메서드 추가
 
 ### v0.1.x
 

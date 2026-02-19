@@ -24,7 +24,8 @@ iOS 앱 프로젝트에 LimeLink SDK를 연동하는 전체 과정을 안내합�
 | iOS Deployment Target | 12.0 |
 | Swift | 5.0 |
 | Xcode | 14.0+ |
-| CocoaPods | 1.11.0+ |
+| CocoaPods | 1.11.0+ (CocoaPods 사용 시) |
+| Swift Package Manager | Xcode 14.0+ (SPM 사용 시) |
 
 **사전 준비:**
 - [limelink.org](https://limelink.org) 콘솔에서 앱을 등록하고 API Key를 발급받으세요.
@@ -33,6 +34,37 @@ iOS 앱 프로젝트에 LimeLink SDK를 연동하는 전체 과정을 안내합�
 ---
 
 ## Step 1: SDK 설치
+
+### Swift Package Manager (권장)
+
+1. Xcode에서 **File > Add Package Dependencies...** 선택
+2. 패키지 URL 입력:
+   ```
+   https://github.com/hellovelope/limelink-ios-sdk.git
+   ```
+3. **Version Rules**에서 `Up to Next Major Version`을 선택하고 `0.2.0` 입력
+4. **Add Package** 클릭
+
+또는 `Package.swift`에서 직접 추가:
+
+```swift
+dependencies: [
+    .package(url: "https://github.com/hellovelope/limelink-ios-sdk.git", from: "0.2.0")
+]
+```
+
+타겟에 의존성을 추가합니다:
+
+```swift
+.target(
+    name: "YourApp",
+    dependencies: [
+        .product(name: "LimelinkIOSSDK", package: "limelink-ios-sdk")
+    ]
+)
+```
+
+> **참고**: SPM 패키지는 Swift 타겟(`LimelinkIOSSDK`)과 ObjC Bridge 타겟(`LimelinkIOSSDKObjC`) 2개로 구성됩니다. `LimelinkIOSSDK` 라이브러리를 추가하면 두 타겟 모두 포함됩니다.
 
 ### CocoaPods
 
@@ -368,6 +400,11 @@ LimeLinkSDK.shared.handleDeferredDeepLink { result, error in
     if let result = result {
         // result.isDeferred == true
         // result.resolvedUri 에 딥링크 URI
+        // result.originalUrl 에 원본 링크 URL (full_request_url)
+        // result.queryParams 에 원본 URL의 쿼리 파라미터
+        print("URI: \(result.resolvedUri ?? "")")
+        print("Original URL: \(result.originalUrl ?? "")")
+        print("Query Params: \(result.queryParams)")  // 예: ["utm_source": "google", "product_id": "789"]
     }
     if let error = error {
         // 매칭 실패 또는 네트워크 에러
