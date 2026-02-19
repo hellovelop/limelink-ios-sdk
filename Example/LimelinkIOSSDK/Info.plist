@@ -38,6 +38,7 @@
 	<key>com.apple.developer.associated-domains</key>
 	<array>
 		<string>applinks:limelink.org</string>
+		<string>applinks:*.limelink.org</string>
 	</array>
 	<key>CFBundleURLTypes</key>
 	<array>

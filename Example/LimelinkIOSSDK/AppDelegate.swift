@@ -7,8 +7,7 @@
 //
 
 import UIKit
-
-
+import LimelinkIOSSDK
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,7 +16,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        // LimeLink SDK 초기화
+        let config = LimeLinkConfig(
+            apiKey: "YOUR_API_KEY",
+            loggingEnabled: true,
+            deferredDeeplinkEnabled: true
+        )
+        LimeLinkSDK.initialize(config: config)
+
         return true
     }
     
@@ -26,7 +32,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Universal Link 처리
         if userActivity.activityType == NSUserActivityTypeBrowsingWeb {
             if let url = userActivity.webpageURL {
-                LimelinkSDK.shared.handleUniversalLink(url)
+                LimeLinkSDK.shared.handleUniversalLink(url)
                 return true
             }
         }
@@ -35,13 +41,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     // iOS 9 이하 버전 지원을 위한 메서드
     func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
-        LimelinkSDK.shared.handleUniversalLink(url)
+        LimeLinkSDK.shared.handleUniversalLink(url)
         return true
     }
     
     // iOS 9+ 커스텀 URL 스킴 처리
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
-        LimelinkSDK.shared.handleUniversalLink(url)
+        LimeLinkSDK.shared.handleUniversalLink(url)
         return true
     }
 
