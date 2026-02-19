@@ -100,15 +100,23 @@ import UIKit
 
         log("Checking deferred deep link...")
 
-        DeferredDeepLinkService.getDeferredDeepLink(baseUrl: config.baseUrl) { [weak self] result in
+        DeferredDeepLinkService.getDeferredDeepLinkWithDetail(baseUrl: config.baseUrl) { [weak self] result in
             guard let self = self else { return }
 
             switch result {
-            case .success(let uri):
+            case .success(let info):
+                // full_request_url에서 queryParams 파싱
+                var queryParams: [String: String] = [:]
+                if let originalUrlString = info.originalUrl,
+                   let originalURL = URL(string: originalUrlString) {
+                    let components = URLComponents(url: originalURL, resolvingAgainstBaseURL: false)
+                    components?.queryItems?.forEach { queryParams[$0.name] = $0.value ?? "" }
+                }
+
                 let linkResult = LimeLinkResult(
-                    originalUrl: nil,
-                    resolvedUri: uri,
-                    queryParams: [:],
+                    originalUrl: info.originalUrl,
+                    resolvedUri: info.uri,
+                    queryParams: queryParams,
                     pathParams: PathParamResponse(mainPath: ""),
                     isDeferred: true
                 )
@@ -165,4 +173,12 @@ import UIKit
         guard config?.loggingEnabled == true else { return }
         print("[LimeLinkSDK] \(message)")
     }
+
+    #if DEBUG
+    internal func resetForTesting() {
+        _isInitialized = false
+        config = nil
+        listeners = NSHashTable<AnyObject>.weakObjects()
+    }
+    #endif
 }

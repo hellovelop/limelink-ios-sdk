@@ -9,6 +9,21 @@ public class DeferredDeepLinkService {
         baseUrl: String? = nil,
         completion: @escaping (Result<String, Error>) -> Void
     ) {
+        getDeferredDeepLinkWithDetail(baseUrl: baseUrl) { result in
+            switch result {
+            case .success(let info):
+                completion(.success(info.uri))
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        }
+    }
+
+    // MARK: - 디퍼드 딥링크 조회 (디테일 포함 - 내부용)
+    static func getDeferredDeepLinkWithDetail(
+        baseUrl: String? = nil,
+        completion: @escaping (Result<(uri: String, originalUrl: String?), Error>) -> Void
+    ) {
         let effectiveBaseUrl = baseUrl ?? defaultBaseURL
 
         // 1. 디바이스 정보 수집
@@ -22,7 +37,14 @@ public class DeferredDeepLinkService {
                 let fullRequestUrl = response.fullRequestUrl
 
                 // 3. suffix로 dynamic_link API 호출 (full_request_url과 event_type 포함)
-                fetchDynamicLink(baseUrl: effectiveBaseUrl, suffix: suffix, fullRequestUrl: fullRequestUrl, completion: completion)
+                fetchDynamicLink(baseUrl: effectiveBaseUrl, suffix: suffix, fullRequestUrl: fullRequestUrl) { linkResult in
+                    switch linkResult {
+                    case .success(let uri):
+                        completion(.success((uri: uri, originalUrl: fullRequestUrl)))
+                    case .failure(let error):
+                        completion(.failure(error))
+                    }
+                }
 
             case .failure(let error):
                 completion(.failure(error))

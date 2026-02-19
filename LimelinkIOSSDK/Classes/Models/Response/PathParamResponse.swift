@@ -7,13 +7,14 @@
 
 import Foundation
 
-public class PathParamResponse {
-    public var mainPath: String
-    public var subPath: String?
-    
-    init(mainPath: String, subPath: String? = nil) {
+@objc public class PathParamResponse: NSObject {
+    @objc public var mainPath: String
+    @objc public var subPath: String?
+
+    @objc public init(mainPath: String, subPath: String? = nil) {
         self.mainPath = mainPath
         self.subPath = subPath
+        super.init()
     }
-    
+
 }
